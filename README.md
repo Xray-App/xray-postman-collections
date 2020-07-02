@@ -157,4 +157,4 @@ This collection is provided as-is. No guarantees whatsoever.
 
 ## License
 
-MIT
+[MIT](LICENSE)
