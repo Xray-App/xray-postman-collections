@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assemblies timestamp="02/01/2019 14:47:17">
+  <assembly name="/Users/smsf/exps/csharp-xunit-calc/bin/Debug/netcoreapp2.1/csharp-xunit-calc.dll" run-date="2019-02-01" run-time="14:47:17" total="9" passed="7" failed="2" skipped="0" time="0.022" errors="0">
+    <errors />
+    <collection total="9" passed="7" failed="2" skipped="0" name="Test collection for csharp_xunit_calc.CalcTests" time="0.022">
+      <test name="csharp_xunit_calc.CalcTests.FailingTest" type="csharp_xunit_calc.CalcTests" method="FailingTest" time="0.0120000" result="Fail">
+        <failure>
+          <message>Assert.Equal() Failure
+Expected: 5
+Actual:   4</message>
+          <stack-trace>   at csharp_xunit_calc.CalcTests.FailingTest() in /Users/smsf/exps/csharp-xunit-calc/test/CalcTests.cs:line 21</stack-trace>
+        </failure>
+        <traits>
+          <trait name="requirement" value="CALC-1" />
+        </traits>
+      </test>
+      <test name="csharp_xunit_calc.CalcTests.CanAddTheoryMemberDataMethod(value1: -4, value2: -6, expected: -10)" type="csharp_xunit_calc.CalcTests" method="CanAddTheoryMemberDataMethod" time="0.0030000" result="Pass">
+        <traits />
+      </test>
+      <test name="csharp_xunit_calc.CalcTests.CanAddTheoryMemberDataMethod(value1: -2147483648, value2: -1, expected: 2147483647)" type="csharp_xunit_calc.CalcTests" method="CanAddTheoryMemberDataMethod" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="csharp_xunit_calc.CalcTests.CanAddTheoryMemberDataMethod(value1: -2, value2: 2, expected: 0)" type="csharp_xunit_calc.CalcTests" method="CanAddTheoryMemberDataMethod" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="csharp_xunit_calc.CalcTests.CanAddTheoryMemberDataMethod(value1: 1, value2: 2, expected: 3)" type="csharp_xunit_calc.CalcTests" method="CanAddTheoryMemberDataMethod" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="csharp_xunit_calc.CalcTests.MyFirstTheory(value: 5)" type="csharp_xunit_calc.CalcTests" method="MyFirstTheory" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="csharp_xunit_calc.CalcTests.MyFirstTheory(value: 6)" type="csharp_xunit_calc.CalcTests" method="MyFirstTheory" time="0.0010000" result="Fail">
+        <failure>
+          <message>Assert.True() Failure
+Expected: True
+Actual:   False</message>
+          <stack-trace>   at csharp_xunit_calc.CalcTests.MyFirstTheory(Int32 value) in /Users/smsf/exps/csharp-xunit-calc/test/CalcTests.cs:line 35</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="csharp_xunit_calc.CalcTests.MyFirstTheory(value: 3)" type="csharp_xunit_calc.CalcTests" method="MyFirstTheory" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="csharp_xunit_calc.CalcTests.PassingTest" type="csharp_xunit_calc.CalcTests" method="PassingTest" time="0.0010000" result="Pass">
+        <traits>
+          <trait name="labels" value="core UI" />
+        </traits>
+      </test>
+    </collection>
+  </assembly>
+</assemblies>

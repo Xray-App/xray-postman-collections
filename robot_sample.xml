@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="NeoLoad" generated="20191016 17:55:25.758" rpa="false">
+	<suite id="1" name="neoload.Sample_Project">
+		<test id="2" name="WANImpact Local">
+			<kw name="BrowserUser_Create.DefaultSLA.PerTimeInterval.AverageResponseTime">
+				<msg level="INFO" >Some interesting info</msg>
+				<status status="PASS" starttime="20191016 17:55:46.019" endtime="20191016 17:55:47.634"></status>
+			</kw> 
+			<kw name="MyiPhoneUser_Create_report.DefaultSLA.PerTimeInterval.ErrorRate">
+				<status status="FAIL" starttime="20191016 17:55:46.019" endtime="20191016 17:55:47.634"></status>
+				<msg level="FAIL" >Error rate greater than 5 percent</msg>
+			</kw>
+			<kw name="BrowserUser_Create.submit_report.DefaultSLA.PerTimeInterval.AverageResponseTime">
+				<status status="FAIL" starttime="20191016 17:55:46.019" endtime="20191016 17:55:47.634"></status>
+				<msg level="FAIL" >Average Response time too big</msg>
+			</kw>
+			<kw name="Dummy">
+				<status status="FAIL" starttime="20191016 17:55:46.019" endtime="20191016 17:55:47.634"></status>
+			</kw>
+			<tags>
+				<tag>performance</tag>
+				<tag>neoload</tag>
+				<tag>CALC-5106</tag>
+			</tags>
+			<status status="FAIL" endtime="20170220 14:22:12.549" starttime="20170220 14:18:54.567">use only in last resource</status>
+		</test>
+	</suite>
+</robot>
+
+

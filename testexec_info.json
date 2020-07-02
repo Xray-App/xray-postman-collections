@@ -1,0 +1,14 @@
+{
+    "fields": {
+        "project": {
+            "key": "{{PROJECT_KEY}}"
+        },
+        "summary": "Test Execution using Xray JSON",
+        "issuetype": {
+            "name": "{{TESTEXECUTION_ISSUETYPE_NAME}}"
+        },
+        "{{CF_Test_Environments}}" : [
+            "iOS"
+        ]
+    }
+}

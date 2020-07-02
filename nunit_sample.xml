@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-run id="0" testcasecount="14" result="Failed" total="14" passed="13" failed="1" inconclusive="0" skipped="0" asserts="14" portable-engine-version="3.3.0.0" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.220000">
+  <test-suite type="Assembly" id="1021" name="x, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" fullname="x, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" runstate="Runnable" testcasecount="14" result="Failed" site="Child" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.096125" total="14" passed="13" failed="1" inconclusive="0" skipped="0" asserts="14">
+    <settings>
+      <setting name="WorkDirectory" value="C:\Users\Sergio\x" />
+    </settings>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestFixture" id="1000" name="TestClass" fullname="TestClass" classname="TestClass" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.072502" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="2">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="ParameterizedMethod" id="1003" name="SubtractTest" fullname="TestClass.SubtractTest" classname="TestClass" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.069346" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="2">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1001" name="SubtractTest(1)" fullname="TestClass.SubtractTest(1)" methodname="SubtractTest" classname="TestClass" runstate="Runnable" seed="366007487" result="Failed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.037291" asserts="1">
+          <failure>
+            <message><![CDATA[  Expected: 10
+  But was:  1
+]]></message>
+            <stack-trace><![CDATA[at TestClass.SubtractTest(Int32 x) in C:\Users\Sergio\x\TestClass.cs:line 13
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1002" name="SubtractTest(10)" fullname="TestClass.SubtractTest(10)" methodname="SubtractTest" classname="TestClass" runstate="Runnable" seed="718072923" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000087" asserts="1" />
+      </test-suite>
+    </test-suite>
+    <test-suite type="TestSuite" id="1022" name="x" fullname="x" runstate="Runnable" testcasecount="12" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.014617" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="12">
+      <test-suite type="TestFixture" id="1004" name="CalculatorTests" fullname="x.CalculatorTests" classname="x.CalculatorTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.014413" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="12">
+        <test-suite type="ParameterizedMethod" id="1008" name="CanAddNumbers" fullname="x.CalculatorTests.CanAddNumbers" classname="x.CalculatorTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.003875" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="3">
+          <properties>
+            <property name="Requirement" value="CALC-1" />
+          </properties>
+          <test-case id="1005" name="CanAddNumbers(1,1,2)" fullname="x.CalculatorTests.CanAddNumbers(1,1,2)" methodname="CanAddNumbers" classname="x.CalculatorTests" runstate="Runnable" seed="294103071" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.001020" asserts="1" />
+          <test-case id="1006" name="CanAddNumbers(-1,-1,-2)" fullname="x.CalculatorTests.CanAddNumbers(-1,-1,-2)" methodname="CanAddNumbers" classname="x.CalculatorTests" runstate="Runnable" seed="1182014034" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000091" asserts="1" />
+          <test-case id="1007" name="CanAddNumbers(100,5,105)" fullname="x.CalculatorTests.CanAddNumbers(100,5,105)" methodname="CanAddNumbers" classname="x.CalculatorTests" runstate="Runnable" seed="1348027914" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000068" asserts="1" />
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1020" name="CanDivide" fullname="x.CalculatorTests.CanDivide" classname="x.CalculatorTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.002578" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="3">
+          <test-case id="1017" name="CanDivide(1,1,1)" fullname="x.CalculatorTests.CanDivide(1,1,1)" methodname="CanDivide" classname="x.CalculatorTests" runstate="Runnable" seed="1138926382" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000262" asserts="1" />
+          <test-case id="1018" name="CanDivide(-1,-1,1)" fullname="x.CalculatorTests.CanDivide(-1,-1,1)" methodname="CanDivide" classname="x.CalculatorTests" runstate="Runnable" seed="794915688" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000055" asserts="1" />
+          <test-case id="1019" name="CanDivide(100,5,20)" fullname="x.CalculatorTests.CanDivide(100,5,20)" methodname="CanDivide" classname="x.CalculatorTests" runstate="Runnable" seed="1794972673" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000048" asserts="1" />
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1016" name="CanMultiply" fullname="x.CalculatorTests.CanMultiply" classname="x.CalculatorTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.002411" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="3">
+          <test-case id="1013" name="CanMultiply(1,1,1)" fullname="x.CalculatorTests.CanMultiply(1,1,1)" methodname="CanMultiply" classname="x.CalculatorTests" runstate="Runnable" seed="343632280" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000300" asserts="1" />
+          <test-case id="1014" name="CanMultiply(-1,-1,1)" fullname="x.CalculatorTests.CanMultiply(-1,-1,1)" methodname="CanMultiply" classname="x.CalculatorTests" runstate="Runnable" seed="55985941" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000050" asserts="1" />
+          <test-case id="1015" name="CanMultiply(100,5,500)" fullname="x.CalculatorTests.CanMultiply(100,5,500)" methodname="CanMultiply" classname="x.CalculatorTests" runstate="Runnable" seed="1688307993" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000045" asserts="1" />
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1012" name="CanSubtract" fullname="x.CalculatorTests.CanSubtract" classname="x.CalculatorTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.002535" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="3">
+          <test-case id="1009" name="CanSubtract(1,1,0)" fullname="x.CalculatorTests.CanSubtract(1,1,0)" methodname="CanSubtract" classname="x.CalculatorTests" runstate="Runnable" seed="1249440584" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000405" asserts="1" />
+          <test-case id="1010" name="CanSubtract(-1,-1,0)" fullname="x.CalculatorTests.CanSubtract(-1,-1,0)" methodname="CanSubtract" classname="x.CalculatorTests" runstate="Runnable" seed="1502662439" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000052" asserts="1" />
+          <test-case id="1011" name="CanSubtract(100,5,95)" fullname="x.CalculatorTests.CanSubtract(100,5,95)" methodname="CanSubtract" classname="x.CalculatorTests" runstate="Runnable" seed="1953557701" result="Passed" start-time="2017-01-21 09:20:40Z" end-time="2017-01-21 09:20:40Z" duration="0.000047" asserts="1" />
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

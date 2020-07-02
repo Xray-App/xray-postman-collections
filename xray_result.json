@@ -1,0 +1,31 @@
+{
+    "info" : {
+        "summary" : "Execution of automated tests for release",
+        "description" : "This execution is automatically created when importing execution results from an external source",
+        "startDate" : "2020-05-30T11:37:00+01:00",
+        "finishDate" : "2020-05-30T11:50:00+01:00"
+    },
+    "tests" : [
+        {
+            "testKey" : "{{T1_KEY}}",
+            "start" : "2020-05-30T11:47:35+01:00",
+            "finish" : "2020-05-30T11:49:35+01:00",
+            "comment" : "Successful execution1",
+            "status" : "PASS"
+        },
+        {
+            "testKey" : "{{T2_KEY}}",
+            "start" : "2020-05-30T11:37:35+01:00",
+            "finish" : "2020-05-30T11:39:35+01:00",
+            "comment" : "Successful execution2",
+            "status" : "PASS"
+        },
+        {
+            "testKey" : "{{T3_KEY}}",
+            "start" : "2020-05-30T11:44:35+01:00",
+            "finish" : "2020-05-30T11:45:35+01:00",
+            "comment" : "Successful execution3",
+            "status" : "PASS"
+        }
+ ]
+}
