@@ -1,6 +1,6 @@
 # Xray Postman Collections
 
-![Xray Postman Collections][postman_collections_example.png]
+![Xray Postman Collections](postman_collections_example.png)
 
 Here you can find some Postman collections that exemplify usage of [Xray Test Management](https://www.getxray.app/) public APIs.
 The idea is to have some concrete examples of how to make certain, basic requests. Then you can play with them and adapt to your needs. It's easier to learn by example, isn't it?
@@ -25,9 +25,9 @@ First of all, you'll need [Postman](https://www.postman.com/) :-)
 In Postman **you need to configure variables on the collection** adjusting them to the specifics of your environment.
 
 **Examples**
-![collection variables for Xray REST v1][server_rest_v1_variables.png]
+![collection variables for Xray REST v1](server_rest_v1_collection_variables.png)
 
-![collection variables for Xray REST v2][server_rest_v2_variables.png]
+![collection variables for Xray REST v2](server_rest_v1_collection_variables.png)
 
 Part of them, if not all, can be defined as environment variables; in this case you need to create an environment in Postman and define the variables there.
 
@@ -40,7 +40,7 @@ Part of them, if not all, can be defined as environment variables; in this case 
 | JIRA_PASSWORD     | xxxxxx                                            |
 
 **Example of environment configuration**
-![environment variables][cloud_collection_variables.png]
+![environment variables][cloud_collection_variables.png)
 
 **Cloud specific variables, normally defined within a Postman environment**
 
@@ -52,7 +52,7 @@ Part of them, if not all, can be defined as environment variables; in this case 
 | JIRA_PASSWORD     | xxxxxx   (JIRA Api token)                         |
 
 **Example of environment configuration**
-![environment variables][cloud_collection_variables.png]
+![environment variables](cloud_collection_variables.png)
 
 After adjusting the variables, it is recommended to run the requests in bulk using the collection runner in order to populate the variables (you could also run just the "setup" related requests).
 Afterwards, you can send requests individually right from Postman's main screen (i.e. the editor).
@@ -100,7 +100,7 @@ This will create a token that you'll need to use in following requests.
 
 Note: Xray cloud APIs are rate/resource limited, so you should have that in mind. More info [here](https://confluence.xpand-it.com/display/XRAYCLOUD/GraphQL+API).
 
-Examples for the public APIs (REST and GraphQL based) are provided in the same [collection](Xray Cloud GraphQL API.postman_collection).
+Examples for the public APIs (REST and GraphQL based) are provided in the same [collection](./Xray Cloud GraphQL API.postman_collection).
 
 You need to define some variables (client_id, client_secret) in a Postman environment used and assigned to run the collection.
 
