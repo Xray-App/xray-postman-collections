@@ -178,4 +178,4 @@ This collection is provided as-is. No guarantees whatsoever.
 
 ## License
 
-[MIT](LICENSE)
+[BSD 3-clause](LICENSE)
