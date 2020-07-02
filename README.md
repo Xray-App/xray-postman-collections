@@ -47,7 +47,7 @@ In Postman **you need to configure variables on the collection** adjusting them 
 **Examples**
 ![collection variables for Xray REST v1](server_rest_v1_collection_variables.png)
 
-![collection variables for Xray REST v2](server_rest_v1_collection_variables.png)
+![collection variables for Xray REST v2](server_rest_v2_collection_variables.png)
 
 Part of them, if not all, can be defined as environment variables; in this case you need to create an environment in Postman and define the variables there.
 
@@ -61,7 +61,9 @@ Part of them, if not all, can be defined as environment variables; in this case 
  JIRA_PASSWORD     | xxxxxx                                            
 
 **Example of environment configuration**
-![environment variables][cloud_collection_variables.png)
+![environment variables](server_variables.png)
+
+
 
 **Cloud specific variables, normally defined within a Postman environment**
 
