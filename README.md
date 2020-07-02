@@ -1,9 +1,5 @@
 # Xray Postman Collections
 
-![Xray Postman Collections](postman_collections_example.png)
-
-
-
 - [Xray Postman Collections](#xray-postman-collections)
   * [Collections organization](#collections-organization)
   * [How to use the collections](#how-to-use-the-collections)
@@ -21,6 +17,7 @@
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+![Xray Postman Collections](postman_collections_example.png)
 
 Here you can find some Postman collections that exemplify usage of [Xray Test Management](https://www.getxray.app/) public APIs.
 The idea is to have some concrete examples of how to make certain, basic requests. Then you can play with them and adapt to your needs. It's easier to learn by example, isn't it?
@@ -108,7 +105,7 @@ It provides the ability to obtain and update Xray related entities and their rel
 Unfortunately, not all endpoints are RESTful compliant due to some minor incompabilities.
 Xray REST API reuses the same authentication mechanism used by Jira's REST API.
 
-Examples for this API are provided in [this collection](./Xray REST API v1.0.postman_collection.json).
+Examples for this API are provided in ![this collection](Xray REST API v1.0.postman_collection.json).
 
 #### REST API v2.0
 
