@@ -2,6 +2,26 @@
 
 ![Xray Postman Collections](postman_collections_example.png)
 
+
+
+- [Xray Postman Collections](#xray-postman-collections)
+  * [Collections organization](#collections-organization)
+  * [How to use the collections](#how-to-use-the-collections)
+  * [APIs](#apis)
+    + [Xray server (i.e. on Jira server/Datacenter)](#xray-server--ie-on-jira-server-datacenter-)
+      - [REST API v1.0](#rest-api-v10)
+      - [REST API v2.0](#rest-api-v20)
+    + [Xray Cloud (i.e. on Jira Cloud)](#xray-cloud--ie-on-jira-cloud-)
+      - [REST API v1](#rest-api-v1)
+      - [GraphQL](#graphql)
+  * [Questions](#questions)
+  * [TO DO](#to-do)
+  * [Disclaimer](#disclaimer)
+  * [License](#license)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 Here you can find some Postman collections that exemplify usage of [Xray Test Management](https://www.getxray.app/) public APIs.
 The idea is to have some concrete examples of how to make certain, basic requests. Then you can play with them and adapt to your needs. It's easier to learn by example, isn't it?
 
@@ -33,23 +53,25 @@ Part of them, if not all, can be defined as environment variables; in this case 
 
 **Server specific variables, normally defined within a Postman environment**
 
-| Variable          | example                                           |
-| JIRA_BASEURL      | https://sandbox.xpand-it.com                      |
-| baseUrl           | https://sandbox.xpand-it.com/rest/raven/2.0/api   |
-| JIRA_USERNAME     | sergio                                            |
-| JIRA_PASSWORD     | xxxxxx                                            |
+ Variable          | example                                           
+-------------------| --------------------------------------------------
+ JIRA_BASEURL      | https://sandbox.xpand-it.com                      
+ baseUrl           | https://sandbox.xpand-it.com/rest/raven/2.0/api   
+ JIRA_USERNAME     | sergio                                            
+ JIRA_PASSWORD     | xxxxxx                                            
 
 **Example of environment configuration**
 ![environment variables][cloud_collection_variables.png)
 
 **Cloud specific variables, normally defined within a Postman environment**
 
-| Variable          | example                                           |
-| client_id         | 0011233... (obtained from a Xray API "key"        |
-| client_secr       | 0011233... (obtained from a Xray API "key"        |
-| JIRA_BASEURL      | https://sergiofreire.atlassian.net                |
-| JIRA_USERNAME     | sergio.freire@example.com                         |
-| JIRA_PASSWORD     | xxxxxx   (JIRA Api token)                         |
+ Variable          | example                                           
+-------------------| --------------------------------------------------
+ client_id         | 0011233... (obtained from a Xray API "key")      
+ client_secre      | 0011233... (obtained from a Xray API "key")       
+ JIRA_BASEURL      | https://sergiofreire.atlassian.net                
+ JIRA_USERNAME     | sergio.freire@example.com                         
+ JIRA_PASSWORD     | xxxxxx   (JIRA Api token)                         
 
 **Example of environment configuration**
 ![environment variables](cloud_collection_variables.png)
@@ -84,7 +106,7 @@ It provides the ability to obtain and update Xray related entities and their rel
 Unfortunately, not all endpoints are RESTful compliant due to some minor incompabilities.
 Xray REST API reuses the same authentication mechanism used by Jira's REST API.
 
-Examples for this API are provided in [this collection](Xray REST API v1.0.postman_collection.json).
+Examples for this API are provided in [this collection](./Xray REST API v1.0.postman_collection.json).
 
 #### REST API v2.0
 
