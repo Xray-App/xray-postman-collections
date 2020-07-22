@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "754b6db9-deef-4759-8d90-cddd3ce591f4",
+		"_postman_id": "0afc852f-1671-4b42-b6cd-c32c93c028bf",
 		"name": "Xray REST API v1.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "74d0020a-54a0-4ebd-82c2-6f64bdbfe1bc",
+								"id": "4e67e140-6d28-4754-a10f-85a481554407",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -23,7 +23,7 @@
 									"pm.test(\"Project returned\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"PROJECT_ID\", jsonData.id);",
+									"    pm.collectionVariables.set(\"PROJECT_ID\", jsonData.id);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -55,7 +55,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "8161ebbd-702a-4e9e-9c32-f4eb273d50a0",
+								"id": "295c0646-7f9a-4ebc-9bc3-85b221067ee4",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -69,21 +69,21 @@
 									"        var cf = jsonData[i];",
 									"        // ((cf.name == \"Test Type\") || (cf.schema.custom == \"com.xpandit.plugins.xray:test-type-custom-field\")) ",
 									"        if (cf.name == \"Test Type\") {",
-									"            pm.globals.set(\"CF_Test_Type\", cf.id);",
+									"            pm.collectionVariables.set(\"CF_Test_Type\", cf.id);",
 									"        } else if (cf.name == \"Pre-Condition Type\") {",
-									"            pm.globals.set(\"CF_Precondition_Type\", cf.id);",
+									"            pm.collectionVariables.set(\"CF_Precondition_Type\", cf.id);",
 									"        } else if (cf.name == \"Cucumber Scenario\") {",
-									"            pm.globals.set(\"CF_Cucumber_Scenario\", cf.id);",
+									"            pm.collectionVariables.set(\"CF_Cucumber_Scenario\", cf.id);",
 									"        } else if (cf.name == \"Cucumber Test Type\") {",
-									"            pm.globals.set(\"CF_Cucumber_Test_Type\", cf.id);",
+									"            pm.collectionVariables.set(\"CF_Cucumber_Test_Type\", cf.id);",
 									"        } else if (cf.name == \"Manual Test Steps\") {",
-									"            pm.globals.set(\"CF_Manual_Test_Steps\", cf.id);",
+									"            pm.collectionVariables.set(\"CF_Manual_Test_Steps\", cf.id);",
 									"        } else if (cf.name == \"Generic Test Definition\") {",
-									"            pm.globals.set(\"CF_Generic_Definition\", cf.id);",
+									"            pm.collectionVariables.set(\"CF_Generic_Definition\", cf.id);",
 									"        } else if (cf.name == \"Test Environments\") {",
-									"            pm.globals.set(\"CF_Test_Environments\", cf.id);",
+									"            pm.collectionVariables.set(\"CF_Test_Environments\", cf.id);",
 									"        } else if (cf.name == \"Test Repository Path\") {",
-									"            pm.globals.set(\"CF_Test_Repository_Path\", cf.id);",
+									"            pm.collectionVariables.set(\"CF_Test_Repository_Path\", cf.id);",
 									"        }",
 									"",
 									"    }",
@@ -118,7 +118,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ca70d28c-5e31-476c-a6a1-a0934d433d02",
+								"id": "51c5a36d-3b67-452f-a026-6cce3d5a5aba",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -127,7 +127,7 @@
 									"pm.test(\"Story created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"S1_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"S1_KEY\", jsonData.key);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -182,7 +182,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f4512cb3-54d1-4f2c-8ce8-c597379df7bb",
+								"id": "4ec714bf-175c-4af4-b4c1-1d4ee7159ea4",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -191,7 +191,7 @@
 									"pm.test(\"Bug created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"D1_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"D1_KEY\", jsonData.key);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -246,7 +246,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "bb1b281e-3c08-41ef-a879-9c0c12d75aec",
+								"id": "50868ba1-d9a7-4b94-9c57-2929613151a7",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -255,9 +255,9 @@
 									"pm.test(\"Folder created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.id).not.eq(undefined);",
-									"    pm.globals.set(\"F1_ID\", jsonData.id);",
-									"    pm.globals.set(\"F1_PATH\", \"/\" + jsonData.name);",
-									"    pm.globals.set(\"F1_NAME\", jsonData.name);",
+									"    pm.collectionVariables.set(\"F1_ID\", jsonData.id);",
+									"    pm.collectionVariables.set(\"F1_PATH\", \"/\" + jsonData.name);",
+									"    pm.collectionVariables.set(\"F1_NAME\", jsonData.name);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -316,7 +316,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3f5db2a3-2bf2-4c6e-a80f-4c9e3b03ea6b",
+								"id": "e3cd77fb-1ec0-4658-9fc0-56ee9617ee88",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -325,9 +325,9 @@
 									"pm.test(\"Folder created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.id).not.eq(undefined);",
-									"    pm.globals.set(\"F2_ID\", jsonData.id);",
-									"    pm.globals.set(\"F2_PATH\", \"/\" + jsonData.name);",
-									"    pm.globals.set(\"F2_NAME\", jsonData.name);",
+									"    pm.collectionVariables.set(\"F2_ID\", jsonData.id);",
+									"    pm.collectionVariables.set(\"F2_PATH\", \"/\" + jsonData.name);",
+									"    pm.collectionVariables.set(\"F2_NAME\", jsonData.name);",
 									"});",
 									"",
 									"if (pm.collectionVariables.get(\"XRAY_VERSION_MAJOR\") == \"4\") {",
@@ -390,7 +390,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b1ff24b0-cb5e-4d8f-a746-6d266b44e804",
+								"id": "ada8c7be-e914-41c0-913b-79537dfc1c62",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -399,7 +399,7 @@
 									"pm.test(\"Test created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"T1_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"T1_KEY\", jsonData.key);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -454,7 +454,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0503fcbd-426e-4c92-87bc-989298b40b75",
+								"id": "d7ae50af-aaca-4994-9523-82396bcd657d",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -463,7 +463,7 @@
 									"pm.test(\"Test created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"T4_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"T4_KEY\", jsonData.key);",
 									"});",
 									"",
 									"postman.setNextRequest(\"create cucumber test T2\")"
@@ -520,7 +520,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "57c2fb49-e243-40d9-bbd0-913ed9e4f943",
+								"id": "02618640-43da-46ea-89d7-9441b633f935",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -529,7 +529,7 @@
 									"pm.test(\"Test created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"T1_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"T1_KEY\", jsonData.key);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -584,7 +584,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "12c28686-b98e-4bfb-a05c-52e70580f425",
+								"id": "cdabb393-30ab-4cca-8cdb-1c5f07563d3b",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -593,7 +593,7 @@
 									"pm.test(\"Test created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"T4_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"T4_KEY\", jsonData.key);",
 									"});",
 									"",
 									"postman.setNextRequest(\"create cucumber test T2\")"
@@ -650,7 +650,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "fa3a85eb-990a-48cd-bab1-868b206dfc3e",
+								"id": "1ace80a8-1c7b-4679-941a-f24b10251848",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -659,7 +659,7 @@
 									"pm.test(\"Test created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"T2_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"T2_KEY\", jsonData.key);",
 									"});",
 									"",
 									"",
@@ -717,7 +717,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2293a702-6702-4e21-a9dc-12902affefbe",
+								"id": "1cfdb4f9-1933-4ba1-a409-24cc94ca1d9a",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -726,7 +726,7 @@
 									"pm.test(\"Test created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"T3_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"T3_KEY\", jsonData.key);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -781,7 +781,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "37303c14-2951-4af9-bf7d-17cb73b4ed22",
+								"id": "49d59fee-9c3d-4df8-9b98-11a1952f1bd5",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -790,7 +790,7 @@
 									"pm.test(\"Precondition created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"P1_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"P1_KEY\", jsonData.key);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -845,7 +845,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5c8c7dab-68bd-4d27-83da-d10df6f2af8e",
+								"id": "5349688d-f989-4990-8d05-00321dbda242",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -854,7 +854,7 @@
 									"pm.test(\"Test Set created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"TS1_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"TS1_KEY\", jsonData.key);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -909,7 +909,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "027048b0-dc18-41ef-853e-c514b1a83398",
+								"id": "5cb82c82-04d6-465f-9850-da6a3a3c36b6",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -918,7 +918,7 @@
 									"pm.test(\"Test Plan created\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.key).to.not.be.empty;",
-									"    pm.globals.set(\"TP1_KEY\", jsonData.key);",
+									"    pm.collectionVariables.set(\"TP1_KEY\", jsonData.key);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -973,7 +973,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "570a45a3-8d95-411b-9187-61ec156f6648",
+								"id": "543b970a-97c1-4325-9120-18a3abaea7be",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -982,7 +982,7 @@
 									"pm.test(\"Test Execution created with 3 runs\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.testExecIssue.key).to.not.be.empty;",
-									"    pm.globals.set(\"TE1_KEY\", jsonData.testExecIssue.key);",
+									"    pm.collectionVariables.set(\"TE1_KEY\", jsonData.testExecIssue.key);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -1047,7 +1047,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "63b7e9e0-6d7e-452b-bc28-cb01158f3818",
+										"id": "4d9a9a17-e78e-4515-b517-9e886470f319",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -1061,16 +1061,16 @@
 											"pm.test(\"3 Tests\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.have.lengthOf(3);",
-											"    //pm.globals.set(\"T1_STEP1_ID\", jsonData[0].definition.steps[0].id)",
+											"    //pm.collectionVariables.set(\"T1_STEP1_ID\", jsonData[0].definition.steps[0].id)",
 											"    // hack",
 											"    if (jsonData[0].definition.steps != undefined){",
-											"        pm.globals.set(\"T1_STEP1_ID\", jsonData[0].definition.steps[0].id)",
+											"        pm.collectionVariables.set(\"T1_STEP1_ID\", jsonData[0].definition.steps[0].id)",
 											"    }",
 											"    if (jsonData[1].definition.steps != undefined){",
-											"        pm.globals.set(\"T1_STEP1_ID\", jsonData[1].definition.steps[0].id)",
+											"        pm.collectionVariables.set(\"T1_STEP1_ID\", jsonData[1].definition.steps[0].id)",
 											"    }",
 											"    if (jsonData[2].definition.steps != undefined){",
-											"        pm.globals.set(\"T1_STEP1_ID\", jsonData[2].definition.steps[0].id)",
+											"        pm.collectionVariables.set(\"T1_STEP1_ID\", jsonData[2].definition.steps[0].id)",
 											"    }",
 											"});"
 										],
@@ -1130,7 +1130,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "cb2a2966-f416-40fa-a82d-827fa798b59a",
+										"id": "2ad4a001-7e8f-464c-94e5-db2c1af88e0f",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -1145,7 +1145,7 @@
 											"    var jsonData = pm.response.json();",
 											"    //pm.expect(jsonData).to.have.lengthOf(1);",
 											"    pm.expect(jsonData.length).to.be.above(0);",
-											"    pm.globals.set(\"TR2_ID\",jsonData[0].id);",
+											"    pm.collectionVariables.set(\"TR2_ID\",jsonData[0].id);",
 											"});"
 										],
 										"type": "text/javascript"
@@ -1207,7 +1207,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8c384c16-cc23-40e4-8f9f-23a7c90c4ee5",
+										"id": "ed5bdcb7-1b17-49ba-bb21-4a98da1ce95d",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -1289,7 +1289,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5c113c8b-d742-43a2-b9f6-eccb74f54925",
+										"id": "b4d6921b-4a6e-4a9b-be73-4b0951126293",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -1364,7 +1364,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2af51d8b-3d39-46e1-bb8d-a34abf58a410",
+										"id": "1bb775dc-d7a3-4be9-9a72-4befed4bc299",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -1377,7 +1377,7 @@
 											"",
 											"pm.test(\"step details returned\", function () {",
 											"    var jsonData = pm.response.json();",
-											"    pm.expect(jsonData.id).to.eq(pm.globals.get(\"T1_STEP1_ID\"));",
+											"    pm.expect(jsonData.id).to.eq(pm.collectionVariables.get(\"T1_STEP1_ID\"));",
 											"    pm.expect(jsonData.index).to.eq(1);",
 											"});"
 										],
@@ -1441,7 +1441,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3b946f70-afba-4e2d-9aad-0f92b5d167ae",
+										"id": "54abe350-59cd-4bcd-be31-469fce1c69f5",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -1450,8 +1450,8 @@
 											"pm.test(\"data returned\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.not.be.empty;",
-											"    pm.globals.set(\"T1_NEWSTEP_ID\",jsonData.id);",
-											"    pm.globals.set(\"T1_NEWSTEP_ATTACH1_ID\",jsonData.attachmentIds[0]);",
+											"    pm.collectionVariables.set(\"T1_NEWSTEP_ID\",jsonData.id);",
+											"    pm.collectionVariables.set(\"T1_NEWSTEP_ATTACH1_ID\",jsonData.attachmentIds[0]);",
 											"});",
 											""
 										],
@@ -1521,7 +1521,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d6b5f424-2ce6-4e5f-a965-35dbad77cf18",
+										"id": "ca038347-a7c8-47cb-95d0-b9066781958f",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -1530,7 +1530,7 @@
 											"pm.test(\"data returned\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.not.be.empty;",
-											"    pm.expect(jsonData.id).to.eq(pm.globals.get(\"T1_NEWSTEP_ID\"));",
+											"    pm.expect(jsonData.id).to.eq(pm.collectionVariables.get(\"T1_NEWSTEP_ID\"));",
 											"});",
 											""
 										],
@@ -1601,7 +1601,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a9650f6f-6705-43a7-8f22-7960c962228f",
+										"id": "ad004ef2-94c4-406a-b609-6fb344f3d3f7",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -1610,7 +1610,7 @@
 											"pm.test(\"attachments returned\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.have.lengthOf.at.least(2);",
-											"    pm.expect(jsonData[0].id).to.eq(pm.globals.get(\"T1_NEWSTEP_ATTACH1_ID\"));",
+											"    pm.expect(jsonData[0].id).to.eq(pm.collectionVariables.get(\"T1_NEWSTEP_ATTACH1_ID\"));",
 											"});"
 										],
 										"type": "text/javascript"
@@ -1674,7 +1674,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "7cf06423-09bd-45d8-9332-50894090fdb3",
+										"id": "af6aaee6-1913-4a58-947e-a7de7e8c0ca4",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -1749,7 +1749,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "73143788-6ea7-455d-a4ae-1b3b52fdddaa",
+										"id": "11619428-8627-4096-a901-b088b51f5050",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -1832,7 +1832,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "727377f0-c4c8-434a-b962-8784c48683c7",
+								"id": "e2222a0c-f15f-4506-95b7-9db00eeb945d",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -1898,7 +1898,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c9fd4b75-510d-41d9-9463-6d86bb303b16",
+								"id": "eb33ba82-abe9-4c8e-93f3-2c550d6d741e",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -1973,7 +1973,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "037f9497-e370-4198-be84-2baa70455101",
+								"id": "cf07f4a0-5240-44c7-8ab2-5592245a34fc",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2048,7 +2048,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "fc748285-f158-44cf-88ae-32b9008f13d1",
+								"id": "5a5b2a0b-59ed-4606-9e16-ae55a1dcb93f",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2120,7 +2120,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "627400f1-99dc-469b-9ed1-9acf048b3ce5",
+								"id": "be6e2e24-b9ce-41a9-8fd9-c80c5e555c47",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2186,7 +2186,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d173e629-9f6e-4dad-a179-0cc371911156",
+								"id": "be4f77c7-47ff-4b47-8249-10b9403a8b4c",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2261,7 +2261,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2c4dd1ad-8cdc-4d35-9e01-e775ae91f49f",
+								"id": "f5cd0a91-8094-463b-87cc-6acd49addb32",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2336,7 +2336,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4928ad01-65bd-44ce-ac51-166bb52e5318",
+								"id": "9e528b89-7559-4608-82e2-cfc0fe875f1a",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2408,7 +2408,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "bf515489-7a23-4f7e-ab68-198ad798bb6d",
+								"id": "cbe67112-31ac-4b3c-bc52-29e45856f759",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2474,7 +2474,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2243a230-7985-40c8-9324-b28df2b12532",
+								"id": "abd3f551-da6c-4d48-825e-7de1ac074399",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2549,7 +2549,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "327f540c-9ba6-4a93-97a3-5d6e22153641",
+								"id": "f6fc59aa-9ba7-474d-bc4a-c4ee6a1298ad",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2614,7 +2614,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "aca6c0f9-8cfc-4fe5-92a6-1deb95ec62ca",
+						"id": "b0a4b23a-d859-491f-9143-9ee192746cce",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2624,7 +2624,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b8e9d595-5306-4075-83a1-354b4cb283b0",
+						"id": "465016e2-b74b-4904-aadf-9ecfea4fb977",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2646,7 +2646,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0303bdf8-82da-41e4-adc9-3ee10ed65c67",
+										"id": "1ee24e03-41cd-4e6b-8fe1-8be2136b2c84",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -2655,10 +2655,10 @@
 											"pm.test(\"data returned\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.not.be.empty;",
-											"    pm.expect(jsonData.testKey).to.eq(pm.globals.get(\"T3_KEY\"));",
-											"    pm.expect(jsonData.testExecKey).to.eq(pm.globals.get(\"TE1_KEY\"));",
+											"    pm.expect(jsonData.testKey).to.eq(pm.collectionVariables.get(\"T3_KEY\"));",
+											"    pm.expect(jsonData.testExecKey).to.eq(pm.collectionVariables.get(\"TE1_KEY\"));",
 											"    pm.expect(jsonData.status).to.eq(\"PASS\");",
-											"    pm.globals.set(\"TR3_ID\",jsonData.id);",
+											"    pm.collectionVariables.set(\"TR3_ID\",jsonData.id);",
 											"",
 											"",
 											"});",
@@ -2724,7 +2724,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "bc6af64c-0bbf-4d3d-b2ac-e0489517020e",
+										"id": "033ef52b-abfe-40f9-97e1-ed5c30f9b305",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -2733,10 +2733,10 @@
 											"pm.test(\"data returned\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.not.be.empty;",
-											"    pm.expect(jsonData.testKey).to.eq(pm.globals.get(\"T1_KEY\"));",
-											"    pm.expect(jsonData.testExecKey).to.eq(pm.globals.get(\"TE1_KEY\"));",
+											"    pm.expect(jsonData.testKey).to.eq(pm.collectionVariables.get(\"T1_KEY\"));",
+											"    pm.expect(jsonData.testExecKey).to.eq(pm.collectionVariables.get(\"TE1_KEY\"));",
 											"    pm.expect(jsonData.status).to.eq(\"PASS\");",
-											"    pm.globals.set(\"TR1_ID\",jsonData.id);",
+											"    pm.collectionVariables.set(\"TR1_ID\",jsonData.id);",
 											"",
 											"",
 											"});",
@@ -2802,7 +2802,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "76cc7234-3d10-4280-b341-5d3ff675ced5",
+										"id": "81df0a6d-9129-4f99-b31a-d807e442d0ae",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -2811,10 +2811,10 @@
 											"pm.test(\"data returned\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.not.be.empty;",
-											"    pm.expect(jsonData.testKey).to.eq(pm.globals.get(\"T3_KEY\"));",
-											"    pm.expect(jsonData.testExecKey).to.eq(pm.globals.get(\"TE1_KEY\"));",
+											"    pm.expect(jsonData.testKey).to.eq(pm.collectionVariables.get(\"T3_KEY\"));",
+											"    pm.expect(jsonData.testExecKey).to.eq(pm.collectionVariables.get(\"TE1_KEY\"));",
 											"    pm.expect(jsonData.status).to.eq(\"PASS\");",
-											"    pm.globals.set(\"TR3_ID\",jsonData.id);",
+											"    pm.collectionVariables.set(\"TR3_ID\",jsonData.id);",
 											"",
 											"",
 											"});",
@@ -2871,7 +2871,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "fd31c43e-0fb3-4ec9-87c9-8e84552344a2",
+										"id": "cc2afc99-bb86-4d89-8f73-9942f4776380",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -2910,7 +2910,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"status\": \"PASS\",\n    \"comment\": \"Successful execution\"\n}",
+									"raw": "{\n    \"status\": \"ABORTED\",\n    \"comment\": \"ABORTED execution\"\n}",
 									"options": {
 										"raw": {}
 									}
@@ -2945,7 +2945,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "e9526083-1b17-4b0e-9d19-24887ca4b744",
+										"id": "c75f0cbf-1e40-45d7-9631-3bb781422c13",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -2953,7 +2953,7 @@
 											"",
 											"pm.test(\"status returned\", function () {",
 											"    var response = pm.response.text();",
-											"    pm.expect(pm.response.text()).to.eq(\"PASS\");",
+											"    pm.expect(pm.response.text()).to.eq(\"ABORTED\");",
 											"});",
 											""
 										],
@@ -3009,7 +3009,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f58b2232-7cfa-4a18-afff-0884eb2b4ef2",
+										"id": "89328299-4f22-47aa-9e12-de24ebdf00ea",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3081,7 +3081,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "aceb8906-a6c8-4a03-a573-d8df984c453a",
+										"id": "d786c162-08af-4822-9cde-f633f684ee20",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3147,7 +3147,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "05c9d7f6-4b43-4256-89d7-7acdac307d7a",
+										"id": "e0b12ecf-1d9a-4e65-8912-705bde9370af",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3157,7 +3157,7 @@
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.not.be.empty;",
 											"    pm.expect(jsonData.length).to.be.above(0);",
-											"    pm.expect(jsonData[0].key).to.eq(pm.globals.get(\"D1_KEY\"));",
+											"    pm.expect(jsonData[0].key).to.eq(pm.collectionVariables.get(\"D1_KEY\"));",
 											"});"
 										],
 										"type": "text/javascript"
@@ -3222,7 +3222,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "45599ab1-16d3-4ca1-a342-5181d5da01d0",
+										"id": "53c9fa96-768c-473c-9b00-be50e7490684",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3296,7 +3296,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "de770e4b-03db-4320-a589-48730d244992",
+										"id": "7e53cb80-fb10-4ff6-b191-36add9aeafc8",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3362,7 +3362,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0f5ada28-bb20-4f6e-a6ee-1f117bb21710",
+										"id": "57305743-7d2c-4798-b481-d87515b0910b",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3372,8 +3372,8 @@
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.not.be.empty;",
 											"    pm.expect(jsonData.length).to.be.above(0);",
-											"    pm.globals.set(\"TR1_ATTACH1_ID\",jsonData[0].id);",
-											"    pm.globals.set(\"TR1_ATTACH1_NAME\",jsonData[0].fileName);",
+											"    pm.collectionVariables.set(\"TR1_ATTACH1_ID\",jsonData[0].id);",
+											"    pm.collectionVariables.set(\"TR1_ATTACH1_NAME\",jsonData[0].fileName);",
 											"});"
 										],
 										"type": "text/javascript"
@@ -3438,7 +3438,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "73c0d3c3-db49-4ca3-84c8-e1e97025dd4b",
+										"id": "1cd965ef-5bcf-4f64-924d-7a0a75d5ee91",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3505,7 +3505,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "40121afa-f43c-474c-8b9d-4d939db5a921",
+										"id": "502256a5-eacf-4c13-a488-3a860d1864ef",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3570,7 +3570,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "2a294967-a253-4fde-925d-b96f7c748a99",
+								"id": "63bbbb9e-1aab-40db-b086-3a58c9652260",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -3580,7 +3580,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "94e0bb80-5e5f-4f93-b2bc-265096f59f6c",
+								"id": "0a528be0-477f-44fa-acfb-6260016d79ec",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -3600,7 +3600,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f13591c5-30f0-406b-8a64-7b677602b9b2",
+										"id": "331a055c-3068-4398-829f-558e7dda7612",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3609,8 +3609,8 @@
 											"pm.test(\"status returned\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.not.be.empty;",
-											"    pm.expect(jsonData.raw).to.eq(\"Successful execution\");",
-											"    pm.expect(jsonData.rendered).to.eq(\"<p>Successful execution</p>\");",
+											"    pm.expect(jsonData.raw).to.eq(\"ABORTED execution\");",
+											"    pm.expect(jsonData.rendered).to.eq(\"<p>ABORTED execution</p>\");",
 											"});",
 											""
 										],
@@ -3666,7 +3666,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2acc957d-b9a8-471d-82e0-80287e777693",
+										"id": "d052327e-da0f-483b-9526-67859cd88b80",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3747,7 +3747,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "67fd5f9d-799a-457a-a626-09d6a9976cf2",
+										"id": "3753fdbd-6243-45c6-bfda-c5c043b1c9b7",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -3757,7 +3757,7 @@
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.not.be.empty;",
 											"    pm.expect(jsonData.assigned).to.eq(true);",
-											"    pm.expect(jsonData.assignee).to.eq(pm.variables.get(\"JIRA_USERNAME\"));",
+											"    pm.expect(jsonData.assignee).to.eq(pm.environment.get(\"JIRA_USERNAME\"));",
 											"});"
 										],
 										"type": "text/javascript"
@@ -3822,7 +3822,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "e100c659-848e-4a43-8a08-2ce62a4fbcf3",
+												"id": "dc4ca232-a5a6-4899-aa5c-81208b949af1",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3836,7 +3836,7 @@
 													"pm.test(\"4 steps returned\", function () {",
 													"    var jsonData = pm.response.json();",
 													"    pm.expect(jsonData).to.have.lengthOf(4);",
-													"    pm.globals.set(\"TR1_STEP1_ID\",jsonData[0].id);",
+													"    pm.collectionVariables.set(\"TR1_STEP1_ID\",jsonData[0].id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3906,7 +3906,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "d374aa81-be0a-4630-8f9e-dba3e00488cf",
+												"id": "06c6a229-e8ee-46a3-a8be-218e4b1b43c0",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3920,7 +3920,7 @@
 													"pm.test(\"4 steps returned\", function () {",
 													"    var jsonData = pm.response.json();",
 													"    pm.expect(jsonData).to.not.be.empty;",
-													"    pm.expect(jsonData.id).to.eq(pm.globals.get(\"TR1_STEP1_ID\"));",
+													"    pm.expect(jsonData.id).to.eq(pm.collectionVariables.get(\"TR1_STEP1_ID\"));",
 													"    pm.expect(jsonData.step.raw).to.eq(\"Step 1\");",
 													"    pm.expect(jsonData.result.raw).to.eq(\"Excepted result 1\");",
 													"});"
@@ -3986,7 +3986,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "7aff242a-9c94-41df-a41b-29cb71d35f58",
+												"id": "83aa569f-c16f-4673-87b5-0d782e3b4fda",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4068,7 +4068,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "a777ac64-5f8c-487e-958e-b8c6f55be9cf",
+												"id": "ef469b5a-bd56-4dde-8be1-f4113d861a08",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4134,7 +4134,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "06f68bd7-c7d0-4f53-ae8e-fdb4098e152b",
+												"id": "9e3d0d3b-48f7-4bb6-8248-dc09008a0433",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4208,7 +4208,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5f414fcd-bf12-4a23-bfdf-ea537a3c44db",
+												"id": "26c4cd17-cfb5-41ee-964d-eac9ab476d09",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4276,7 +4276,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "362f7e08-a8a6-4071-9738-ecd1a81d2189",
+												"id": "26238726-ef92-4f0f-aea8-9614a48251cd",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4286,8 +4286,8 @@
 													"    var jsonData = pm.response.json();",
 													"    pm.expect(jsonData).to.not.be.empty;",
 													"    pm.expect(jsonData.length).to.be.above(0);",
-													"    pm.globals.set(\"TR1_STEP1_ATTACH1_ID\",jsonData[0].id);",
-													"    pm.globals.set(\"TR1_STEP1_ATTACH1_NAME\",jsonData[0].fileName);",
+													"    pm.collectionVariables.set(\"TR1_STEP1_ATTACH1_ID\",jsonData[0].id);",
+													"    pm.collectionVariables.set(\"TR1_STEP1_ATTACH1_NAME\",jsonData[0].fileName);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -4354,7 +4354,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2237179e-ed33-48f8-8443-6424479c57d5",
+												"id": "81f6a589-53d3-40c3-b7fd-ef38e2a13d78",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4423,7 +4423,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "0c397183-bb2d-45c9-b64c-8aeeeb444123",
+												"id": "efca0a45-4196-474a-9865-a6b51d89cdb7",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4490,7 +4490,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "57affa58-f0a4-46e2-8176-7a767767835a",
+										"id": "1380081e-f921-41e9-a486-24f35c229706",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -4500,7 +4500,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b4791c12-069c-410b-a315-f47dfa4ba6d0",
+										"id": "1c3b0f3b-c8fb-4654-be87-492982d25952",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -4524,7 +4524,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9e93cc4f-1add-4d58-9fd7-34e4d13cfc7d",
+										"id": "fe4b7b3c-60c7-4da0-bafd-6b8b9cb8b7c2",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -4602,7 +4602,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "54ae0c94-5fbc-4d21-a774-90f96ca1fd35",
+										"id": "af2c3d53-6a69-4ff9-bcee-36ff50e93132",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -4679,7 +4679,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5eef6348-4b3a-47e8-945d-88f6c847c692",
+								"id": "c0037cff-46e1-4b4e-9776-da4d3d767315",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -4745,7 +4745,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "beda010f-70ac-434b-ad02-0b217506bea5",
+								"id": "6df934b5-84ed-47ec-8750-9eb46ef8112c",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -4820,7 +4820,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d9c1eeee-0872-48d1-a3fe-fd8d28802504",
+								"id": "26085847-5a45-43c1-ab41-0ad8e68eea30",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -4895,7 +4895,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a97d9e1a-72ff-4374-9caf-7b7c0dadaad0",
+								"id": "80ca22c0-7d16-40b6-9828-8dbff58cefb7",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -4970,7 +4970,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d6c10d5e-9d56-4c23-aa5d-b565cecb30f5",
+										"id": "46837f62-2fb1-4bc0-a337-e66158817925",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -5044,7 +5044,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "57d1caa8-816b-40ef-8a75-d243d7e92dec",
+										"id": "88c979db-2672-4935-bbdc-a7982b6b8247",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -5053,8 +5053,8 @@
 											"pm.test(\"data returned\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData).to.not.be.empty;",
-											"    pm.expect(jsonData.name).to.eq(pm.globals.get(\"F1_NAME\"));",
-											"    pm.expect(jsonData.id).to.eq(pm.globals.get(\"F1_ID\"));",
+											"    pm.expect(jsonData.name).to.eq(pm.collectionVariables.get(\"F1_NAME\"));",
+											"    pm.expect(jsonData.id).to.eq(pm.collectionVariables.get(\"F1_ID\"));",
 											"    pm.expect(jsonData.testCount).to.be.above(0);",
 											"    pm.expect(jsonData.totalTestCount).to.be.above(0);",
 											"    pm.expect(jsonData.testRepositoryPath).to.eq(\"\");",
@@ -5115,7 +5115,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "faf2e400-e74b-4be9-92c4-646634236896",
+										"id": "47e6b7c5-a66f-4675-8b70-2502ad253619",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -5124,9 +5124,9 @@
 											"pm.test(\"Folder created\", function () {",
 											"    var jsonData = pm.response.json();",
 											"    pm.expect(jsonData.id).not.eq(undefined);",
-											"    pm.globals.set(\"F3_ID\", jsonData.id);",
-											"    pm.globals.set(\"F3_PATH\", \"/\" + jsonData.name);",
-											"    pm.globals.set(\"F3_NAME\", jsonData.name);",
+											"    pm.collectionVariables.set(\"F3_ID\", jsonData.id);",
+											"    pm.collectionVariables.set(\"F3_PATH\", \"/\" + jsonData.name);",
+											"    pm.collectionVariables.set(\"F3_NAME\", jsonData.name);",
 											"});"
 										],
 										"type": "text/javascript"
@@ -5185,7 +5185,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1e01d804-e34a-43a5-8ae3-a5804148f4f2",
+										"id": "86009770-bb0e-4e43-8dd2-546e400c2a53",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -5248,7 +5248,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "60119187-acfd-4c1c-98f5-683fffc16a51",
+										"id": "2851e05a-47ae-4e89-8303-fb0a37aea352",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -5318,7 +5318,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "aaa040ec-79e8-491b-a6d9-a2f6f97b5146",
+										"id": "f9b14866-7527-4262-bee8-b1417db01477",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -5386,7 +5386,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0701d2e7-90c3-41f9-80cc-e5a34d227833",
+										"id": "45c6a2b7-1c6a-420f-b986-7fabe98f7c3a",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -5450,7 +5450,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2cb02a48-69b0-46cf-a1b2-50ff1e3c2c3d",
+										"id": "dd0f59a5-d1b2-404f-aa97-3619351a7c81",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -5525,12 +5525,12 @@
 							"name": "Xray JSON",
 							"item": [
 								{
-									"name": "standard",
+									"name": "Xray JSON - standard",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
-												"id": "eeb7a301-9f7c-485c-bec0-ba1fc9dcbe52",
+												"id": "0878d73b-7444-4764-9353-44211e183f85",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5596,12 +5596,12 @@
 							"name": "Cucumber",
 							"item": [
 								{
-									"name": "standard",
+									"name": "Cucumber - standard",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
-												"id": "20f1a99c-8439-4be4-9755-00ec2d8d6dd5",
+												"id": "39001094-d48f-41be-bb1c-0fd8097603f1",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5674,12 +5674,12 @@
 							"name": "Behave",
 							"item": [
 								{
-									"name": "standard",
+									"name": "Behave - standard",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
-												"id": "9e91959d-3076-40e8-be0b-4a270c0aaccf",
+												"id": "f2fd6476-c0c7-4caa-837a-38431c285ad0",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5752,12 +5752,12 @@
 							"name": "JUnit",
 							"item": [
 								{
-									"name": "standard",
+									"name": "JUnit - standard",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
-												"id": "c5e9f77f-ec7a-441e-b632-de2bbacf3de6",
+												"id": "0e22c361-5735-4cf1-ab71-b07f017e8577",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5796,7 +5796,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "junit_sample.xml"
+													"src": "/D:/XpandSTF/Sourcetree/xray-postman-collections/junit_sample.xml"
 												}
 											],
 											"options": {
@@ -5834,12 +5834,12 @@
 							"name": "TestNG",
 							"item": [
 								{
-									"name": "standard",
+									"name": "TestNG - standard",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
-												"id": "b870d56b-f057-4c9f-94f4-4510bff47eaf",
+												"id": "a0faae95-3a64-4bcd-b1ce-048923cfd5d4",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5878,7 +5878,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "testng_sample.xml"
+													"src": "/D:/XpandSTF/Sourcetree/xray-postman-collections/testng_sample.xml"
 												}
 											],
 											"options": {
@@ -5916,12 +5916,12 @@
 							"name": "NUnit",
 							"item": [
 								{
-									"name": "standard",
+									"name": "NUnit - standard",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
-												"id": "16fbb50e-b773-4baf-a723-960f6708454e",
+												"id": "7ca35be3-f136-4e29-88fc-cce70f611589",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5960,7 +5960,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "nunit_sample.xml"
+													"src": "/D:/XpandSTF/Sourcetree/xray-postman-collections/nunit_sample.xml"
 												}
 											],
 											"options": {
@@ -5998,12 +5998,12 @@
 							"name": "Robot Framework",
 							"item": [
 								{
-									"name": "standard",
+									"name": "Robot Framework - standard",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
-												"id": "3d094fcf-93e9-429c-bee4-f9575ba566f3",
+												"id": "51390da9-ddfe-4df9-a490-b62c33e7cefd",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -6042,7 +6042,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "robot_sample.xml"
+													"src": "/D:/XpandSTF/Sourcetree/xray-postman-collections/robot_sample.xml"
 												}
 											],
 											"options": {
@@ -6095,7 +6095,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d432baf3-1cbc-40d1-8a6c-13dc6b060b66",
+										"id": "b9682c2a-1e36-4455-b4d9-2fc911aeddcf",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -6158,7 +6158,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "16f10546-7c4b-4700-9104-2ca396a6c11f",
+						"id": "2ecf8588-318f-4d9a-92c1-940511567a1c",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -6168,7 +6168,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ed5d06f3-8a25-47c4-8863-4c4be053896c",
+						"id": "cd141ca5-2add-4295-bed9-0b4f413ea8ae",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -6190,7 +6190,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3a028aad-08de-4c89-af35-fe0cfef24749",
+										"id": "b0e2bd95-8579-47ca-af5b-8b0fbc9f3713",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -6261,7 +6261,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d9d8c5a2-a9b1-4b4a-a876-21cc7dfa6060",
+										"id": "0cdb4321-4548-44fb-8b79-803fe4cdc8b4",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -6337,7 +6337,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7d97a214-2b3e-4cc7-bccd-460abb752b77",
+								"id": "8cbaa82f-2290-405c-893f-af0403803d9c",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -6404,7 +6404,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "21a3ba03-936b-428e-9236-08ec72538891",
+								"id": "351cdf7d-3b45-4b76-8b94-448b2311c588",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -6488,7 +6488,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "613dba0d-bff0-4091-baf7-c8e194f5e710",
+				"id": "83f5992c-a320-41bb-8264-8f05aadf56c9",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -6498,7 +6498,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "17080040-c288-4748-9000-b42e800f86d0",
+				"id": "d1f9c535-2979-4ffb-b8ca-b135d6cf0f90",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -6508,89 +6508,244 @@
 	],
 	"variable": [
 		{
-			"id": "c63f1545-d282-484f-91ac-b9ee0e2a38e3",
+			"id": "87cbb713-ce36-4338-a8d9-5c241b0523c9",
 			"key": "TEST_ISSUETYPE_NAME",
 			"value": "Test"
 		},
 		{
-			"id": "020bd15b-bbce-4c73-b30f-2b848eca83f8",
+			"id": "922b35eb-1503-497f-8de4-90d219dd471c",
 			"key": "PRECONDITION_ISSUETYPE_NAME",
 			"value": "Pre-Condition"
 		},
 		{
-			"id": "b216aad2-36b1-4ff4-bc46-c73a1426c33f",
+			"id": "88cd72c4-d962-4eb4-b4ff-028c08e717dc",
 			"key": "TESTSET_ISSUETYPE_NAME",
 			"value": "Test Set"
 		},
 		{
-			"id": "6744f3a8-e1b2-4c2a-929c-4b5e902e54ca",
+			"id": "22bdd40e-16de-4efc-9df9-6153a1b137b1",
 			"key": "TESTEXECUTION_ISSUETYPE_NAME",
 			"value": "Test Execution"
 		},
 		{
-			"id": "bcb4a2c2-ed44-433a-a58f-620a300425ef",
+			"id": "684b05e4-cff1-4a95-879e-7f723eef6b6e",
 			"key": "TESTPLAN_ISSUETYPE_NAME",
 			"value": "Test Plan"
 		},
 		{
-			"id": "2af6ab25-02a2-4065-b0d5-f03feb949e9b",
+			"id": "3ed9c45b-9e8c-4f1e-a0c3-531ff034834f",
 			"key": "CF_Test_Type",
-			"value": "customfield_10000"
+			"value": "customfield_10100"
 		},
 		{
-			"id": "e54f6043-eea9-45e1-9950-4cb97263b8e6",
+			"id": "49328703-b270-4923-ba47-c9fd858f4f55",
 			"key": "CF_Precondition_Type",
-			"value": "customfield_10008"
+			"value": "customfield_10121"
 		},
 		{
-			"id": "d75ae74a-ab1d-4ecd-96e3-7ada9f9450bc",
+			"id": "f90bc3e3-2e33-4c14-8214-60918201a6ac",
 			"key": "CF_Cucumber_Scenario",
-			"value": "customfield_10002"
+			"value": "customfield_10102"
 		},
 		{
-			"id": "576092e3-dee6-4b6f-97ba-f0d82cda75a4",
+			"id": "d4168ba9-eb80-4936-8a1a-1955ab9402c4",
 			"key": "CF_Cucumber_Test_Type",
-			"value": "customfield_10001"
+			"value": "customfield_10101"
 		},
 		{
-			"id": "bb65968d-328e-43f4-aed8-571fb23f85d9",
+			"id": "c4e359ad-793d-49d5-a8e9-012d88db9008",
 			"key": "CF_Manual_Test_Steps",
-			"value": "customfield_10004"
+			"value": "customfield_10104"
 		},
 		{
-			"id": "cfb1fee5-8275-4dd1-8a80-d98eb11e231f",
+			"id": "bc32323d-f48c-48e2-b9d0-1461ec15d9a8",
 			"key": "CF_Generic_Definition",
-			"value": "customfield_10003"
+			"value": "customfield_10103"
 		},
 		{
-			"id": "052d5483-e316-4504-b533-6834f03a0f5e",
+			"id": "0a15fc77-18a1-42d8-82f3-e369508e37e5",
 			"key": "PROJECT_KEY",
 			"value": "CALC"
 		},
 		{
-			"id": "f80dbb98-defe-4231-b31a-33e3447f1011",
+			"id": "c9da8b96-ca33-4317-95d0-323b55107b43",
 			"key": "CF_Test_Environments",
-			"value": "customfield_11805"
+			"value": "customfield_10125"
 		},
 		{
-			"id": "3a20579c-9ee1-45a1-aa91-2923ebfae517",
+			"id": "fc69871f-c764-400f-bcad-165eb222fea0",
 			"key": "BUG_ISSUETYPE_NAME",
 			"value": "Bug"
 		},
 		{
-			"id": "eac2fd5e-2482-4391-a6fa-912c3e5f79e6",
+			"id": "ea0dc736-4305-4e07-8a69-4573563ca520",
 			"key": "STORY_ISSUETYPE_NAME",
 			"value": "Story"
 		},
 		{
-			"id": "ae18cfbc-a61c-4696-81b7-952c948147d4",
+			"id": "e37f0803-8dc1-4905-b1d9-db4407f8439d",
 			"key": "CF_Test_Repository_Path",
-			"value": "customfield_12100"
+			"value": "customfield_10111"
 		},
 		{
-			"id": "d03d0eba-c03a-4dbf-9eb3-dba962d97f59",
+			"id": "02a70bdc-0305-47c6-8315-2cf5b013d3da",
 			"key": "XRAY_VERSION_MAJOR",
 			"value": "3"
+		},
+		{
+			"id": "3d5cdb8f-0dfc-47cc-8fc8-326d7a98a767",
+			"key": "PROJECT_ID",
+			"value": "10000"
+		},
+		{
+			"id": "898cf44a-d470-4416-9770-2f97217271a5",
+			"key": "S1_KEY",
+			"value": "CALC-2049"
+		},
+		{
+			"id": "3b180bab-7e46-468a-b7e1-8ce1299410ac",
+			"key": "D1_KEY",
+			"value": "CALC-2050"
+		},
+		{
+			"id": "aac3e48f-6807-4be3-b4ef-ace760ff6ecc",
+			"key": "F1_ID",
+			"value": 22
+		},
+		{
+			"id": "a8847dd3-a4d5-4ba5-8bf1-ff26e6ab9d6b",
+			"key": "F1_NAME",
+			"value": "Postman F1 (3)"
+		},
+		{
+			"id": "c13cdd79-154c-480a-bebe-3c2f4480c17d",
+			"key": "F1_PATH",
+			"value": "/Postman F1 (3)"
+		},
+		{
+			"id": "9c99a790-1b6c-4650-9e1e-1714c0f9af6f",
+			"key": "F2_ID",
+			"value": 23
+		},
+		{
+			"id": "4240b4a6-988b-463b-ac6a-194b616734c1",
+			"key": "F2_NAME",
+			"value": "Postman F2 (3)"
+		},
+		{
+			"id": "1e00f4a6-f41f-4c61-a52f-29fa50a01048",
+			"key": "F2_PATH",
+			"value": "/Postman F2 (3)"
+		},
+		{
+			"id": "a2e98f97-2b9e-4844-bff3-77839c614fdc",
+			"key": "T2_KEY",
+			"value": "CALC-2053"
+		},
+		{
+			"id": "9b1324ef-a64d-4de1-b537-7433c0d39e1d",
+			"key": "T3_KEY",
+			"value": "CALC-2054"
+		},
+		{
+			"id": "79f687c2-649a-4bd8-829e-d0298ffc6d7c",
+			"key": "P1_KEY",
+			"value": "CALC-2055"
+		},
+		{
+			"id": "e670ace0-7ccf-46a8-9cf6-92bb5b2d0cb4",
+			"key": "TS1_KEY",
+			"value": "CALC-2056"
+		},
+		{
+			"id": "158a6d15-f1d5-48db-8b8c-61e8d48bc72d",
+			"key": "TP1_KEY",
+			"value": "CALC-2057"
+		},
+		{
+			"id": "bc665061-068a-4b83-a247-d0064884d936",
+			"key": "TE1_KEY",
+			"value": "CALC-2058"
+		},
+		{
+			"id": "83b3f5df-7c4b-4862-b31a-d29e056b2d5d",
+			"key": "T1_STEP1_ID",
+			"value": 1863
+		},
+		{
+			"id": "74579251-96a3-4f9b-a4c9-33ab8d54dde1",
+			"key": "TR2_ID",
+			"value": 4300
+		},
+		{
+			"id": "eb63f4ef-8453-4839-98de-97ee5fca6cef",
+			"key": "T1_NEWSTEP_ATTACH1_ID",
+			"value": 920
+		},
+		{
+			"id": "2563ffe3-4e12-4b26-9f8b-70d32fe72f5e",
+			"key": "T1_NEWSTEP_ID",
+			"value": 1871
+		},
+		{
+			"id": "7da284c5-0c81-4882-92e8-8f24dc9758d5",
+			"key": "TR3_ID",
+			"value": 4301
+		},
+		{
+			"id": "03b58a07-094c-4856-955b-e1fe7d3c1f18",
+			"key": "F3_ID",
+			"value": 24
+		},
+		{
+			"id": "dabf1484-7ccf-4db9-bae9-24d74c890f1f",
+			"key": "F3_NAME",
+			"value": "Postman 3"
+		},
+		{
+			"id": "8a7842e8-17f4-4ee8-8f27-4f7694a466a2",
+			"key": "F3_PATH",
+			"value": "/Postman 3"
+		},
+		{
+			"id": "019c7af0-0e91-429c-8eb9-c9bc7318fe25",
+			"key": "T1_KEY",
+			"value": "CALC-2051"
+		},
+		{
+			"id": "05444f53-ee64-4409-84c1-2dfc659b821b",
+			"key": "T4_KEY",
+			"value": "CALC-2052"
+		},
+		{
+			"id": "8e0b0416-ee4b-4548-be06-049e50b93727",
+			"key": "TR1_ID",
+			"value": 4299
+		},
+		{
+			"id": "0646a06c-39c6-4484-bc82-6091ee7ac315",
+			"key": "TR1_ATTACH1_ID",
+			"value": 919
+		},
+		{
+			"id": "03e29f9e-b5af-47da-86ee-1d571dfd50f1",
+			"key": "TR1_ATTACH1_NAME",
+			"value": "dummy.txt"
+		},
+		{
+			"id": "6024ac5d-bf1e-477b-bbee-f2420618a288",
+			"key": "TR1_STEP1_ID",
+			"value": 3309
+		},
+		{
+			"id": "8e063424-3437-469b-88de-f84eb4349144",
+			"key": "TR1_STEP1_ATTACH1_ID",
+			"value": 918
+		},
+		{
+			"id": "c8773de2-1530-4a6e-a91a-543238f8676c",
+			"key": "TR1_STEP1_ATTACH1_NAME",
+			"value": "dummy.txt"
 		}
 	],
 	"protocolProfileBehavior": {}
