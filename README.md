@@ -67,7 +67,7 @@ Part of them, if not all, can be defined as environment variables; in this case 
  Variable          | example                                           
 -------------------| --------------------------------------------------
  client_id         | 0011233... (obtained from a Xray API "key")      
- client_secre      | 0011233... (obtained from a Xray API "key")       
+ client_secret      | 0011233... (obtained from a Xray API "key")       
  JIRA_BASEURL      | https://sergiofreire.atlassian.net                
  JIRA_USERNAME     | sergio.freire@example.com                         
  JIRA_PASSWORD     | xxxxxx   (JIRA Api token)                         
