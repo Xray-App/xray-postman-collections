@@ -1,5 +1,9 @@
 # Xray Postman Collections
 
+[![license](https://img.shields.io/badge/License-BSD%203--Clause-green.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/Xray-App/community)
+
+
 - [Xray Postman Collections](#xray-postman-collections)
   * [Collections organization](#collections-organization)
   * [How to use the collections](#how-to-use-the-collections)
