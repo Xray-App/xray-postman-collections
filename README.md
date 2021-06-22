@@ -1,5 +1,9 @@
 # Xray Postman Collections
 
+[![license](https://img.shields.io/badge/License-BSD%203--Clause-green.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/Xray-App/community)
+
+
 - [Xray Postman Collections](#xray-postman-collections)
   * [Collections organization](#collections-organization)
   * [How to use the collections](#how-to-use-the-collections)
@@ -67,7 +71,7 @@ Part of them, if not all, can be defined as environment variables; in this case 
  Variable          | example                                           
 -------------------| --------------------------------------------------
  client_id         | 0011233... (obtained from a Xray API "key")      
- client_secre      | 0011233... (obtained from a Xray API "key")       
+ client_secret      | 0011233... (obtained from a Xray API "key")       
  JIRA_BASEURL      | https://sergiofreire.atlassian.net                
  JIRA_USERNAME     | sergio.freire@example.com                         
  JIRA_PASSWORD     | xxxxxx   (JIRA Api token)                         
