@@ -13,8 +13,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      BROWSER: firefox
 
     strategy:
       matrix:
