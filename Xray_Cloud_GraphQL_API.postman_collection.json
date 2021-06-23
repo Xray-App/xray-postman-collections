@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "ee81e764-b536-4495-9e55-3a21d1a3f630",
-		"name": "Xray Cloud GraphQL API",
+		"name": "Xray_Cloud_GraphQL_API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -17,7 +17,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "29c74636-4de0-453a-869e-6e361170697c",
 										"exec": [
 											"    var jsonData = pm.response.json();",
 											"    pm.globals.set(\"AUTH_TOKEN\", jsonData);"
@@ -53,9 +52,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "setup",
@@ -66,7 +63,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a5817bf2-eddc-4455-880c-0e75822de0cd",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -122,7 +118,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c3614f0d-9b76-43bd-a969-54dc5c3ded64",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -200,7 +195,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0f394146-a248-4eb7-a727-9e01399f53cb",
 										"exec": [
 											"pm.test(\"Status code is 201\", function () {",
 											"    pm.response.to.have.status(201);",
@@ -264,7 +258,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4e4435ec-350c-4cf3-bf28-e4edbdd95b39",
 										"exec": [
 											"pm.test(\"Status code is 201\", function () {",
 											"    pm.response.to.have.status(201);",
@@ -328,7 +321,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "e2454130-e448-4869-8384-a27f95c78258",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -370,9 +362,6 @@
 									"graphql": {
 										"query": "mutation {\n    createFolder(\n        projectId: \"{{PROJECT_ID}}\"\n        path: \"/Postman F1\"\n    ) {\n        folder {\n            name\n            path\n            testsCount\n        }\n        warnings\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -393,7 +382,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "fcd6de33-c85e-470e-8290-1ca2cdaf4b63",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -435,9 +423,6 @@
 									"graphql": {
 										"query": "mutation {\n    createFolder(\n        projectId: \"{{PROJECT_ID}}\"\n        path: \"/Postman F2\"\n    ) {\n        folder {\n            name\n            path\n            testsCount\n        }\n        warnings\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -458,7 +443,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d0fca703-761a-4b17-8069-275b339206ff",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -493,9 +477,6 @@
 									"graphql": {
 										"query": "mutation {\n    createTest(\n        testType: { name: \"Manual\" },\n        steps: [\n            {\n                action: \"Step 1\",\n                data: \"input Data 1\",\n                result: \"Excepted result 1\"\n            },\n            {\n                action: \"Step 2\",\n                data: \"input Data 2\",\n                result: \"Excepted result 2\"\n            },\n            {\n                action: \"Step 3\",\n                data: \"input Data 3\",\n                result: \"Excepted result 3\"\n            },\n            {\n                action: \"Step 4\",\n                data: \"input Data 4\",\n                result: \"Excepted result 4\"\n            }\n        ],\n        jira: {\n            fields: { \n                summary: \"T1\",\n                description: \"T1: example of manual test\", \n                project: {key: \"{{PROJECT_KEY}}\"} \n            }\n        }\n        folderPath: \"{{F1_PATH}}\"\n    ) {\n        test {\n            issueId\n            testType {\n                name\n            }\n            steps {\n                action\n                data\n                result\n            }\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -516,7 +497,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6c7f794e-3993-47e2-9135-ccaffe9e78dd",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -551,9 +531,6 @@
 									"graphql": {
 										"query": "mutation {\n    createTest(\n        testType: { name: \"Manual\" },\n        steps: [\n            {\n                action: \"Step 1\",\n                data: \"input Data 1\",\n                result: \"Excepted result 1\"\n            },\n            {\n                action: \"Step 2\",\n                data: \"input Data 2\",\n                result: \"Excepted result 2\"\n            },\n            {\n                action: \"Step 3\",\n                data: \"input Data 3\",\n                result: \"Excepted result 3\"\n            },\n            {\n                action: \"Step 4\",\n                data: \"input Data 4\",\n                result: \"Excepted result 4\"\n            }\n        ],\n        jira: {\n            fields: { \n                summary: \"T4\",\n                description: \"T4: example of manual test\", \n                project: {key: \"{{PROJECT_KEY}}\"} \n            }\n        }\n        folderPath: \"{{F1_PATH}}\"\n    ) {\n        test {\n            issueId\n            testType {\n                name\n            }\n            steps {\n                action\n                data\n                result\n            }\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -574,7 +551,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f7df4193-b329-4f5a-8364-95b3b371fce8",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -609,9 +585,6 @@
 									"graphql": {
 										"query": "mutation {\n    createTest(\n        testType: { name: \"Cucumber\" },\n        gherkin: \"Given I have entered <input_1> into the calculator\\nAnd I have entered <input_2> into the calculator\\nWhen I press <button>\\nThen the result should be <output> on the screen\\n\\n  Examples:\\n    | input_1 | input_2 | button | output |\\n    | 20      | 30      | add    | 50     |\\n    | 2       | 5       | add    | 7      |\",\n        jira: {\n            fields: { summary:\"Sum of two numbers\", project: {key: \"{{PROJECT_KEY}}\"} }\n        }\n        folderPath: \"{{F1_PATH}}\"\n    ) {\n        test {\n            issueId\n            testType {\n                name\n            }\n            gherkin\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -633,7 +606,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "fd62682e-02c8-494f-b649-682c86816149",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -668,9 +640,6 @@
 									"graphql": {
 										"query": "mutation {\n    createTest(\n        testType: { name: \"Generic\" },\n        unstructured: \"sum_script.sh\",\n        jira: {\n            fields: { \n                summary:\"T3\", \n                description: \"T3: example of generic test\",\n                project: {key: \"{{PROJECT_KEY}}\"} \n            }\n        }\n        folderPath: \"{{F1_PATH}}\"\n    ) {\n        test {\n            issueId\n            testType {\n                name\n            }\n            unstructured\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -692,7 +661,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8e2b5540-d091-4c96-946f-5bdfb587a6a0",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -728,9 +696,6 @@
 									"graphql": {
 										"query": "mutation {\n    createPrecondition(\n        preconditionType: { name: \"Manual\" }\n        definition: \"calculator turned on\"\n        jira: {\n            fields: {\n                    summary: \"P1\",\n                    description: \"P1: example of precondition\",\n                    project: {key: \"{{PROJECT_KEY}}\"} \n                }\n        }\n    ) {\n        precondition {\n            issueId\n            preconditionType {\n                name\n            }\n            definition\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -752,7 +717,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "83a97274-63eb-491d-97d3-d75203d05264",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -788,9 +752,6 @@
 									"graphql": {
 										"query": "mutation {\n    createTestSet(\n        testIssueIds: []\n        jira: {\n            fields: {\n                summary: \"TS1\",\n                description: \"TS1: example of test set\",\n                project: {key: \"{{PROJECT_KEY}}\"} \n            }\n        }\n    ) {\n        testSet {\n            issueId\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -811,7 +772,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a7b15cae-12b3-46d1-aa6c-611f7cf0d574",
 										"exec": [
 											"pm.test(\"Status code is 201\", function () {",
 											"    pm.response.to.have.status(201);",
@@ -876,7 +836,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "dde1d497-44d9-4bb9-b7f4-447bf17f10c1",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -918,9 +877,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "backups",
@@ -931,7 +888,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5d1aea81-40a8-4739-94bb-4fc0eeeb61b2",
 										"exec": [
 											"    var jsonData = pm.response.json();",
 											"    pm.globals.set(\"backup_jobId\", jsonData.jobId);"
@@ -970,7 +926,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "bebcd564-73ca-47e8-b78c-912506d889a6",
 										"exec": [
 											"pm.test(\"job status returned\", function () {",
 											"    var jsonData = pm.response.json();",
@@ -1009,102 +964,6 @@
 								}
 							},
 							"response": [
-								{
-									"name": "get backup status - job not found",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "https://xray.cloud.xpand-it.com/api/v1/backup/{{backup_jobId}}/status",
-											"protocol": "https",
-											"host": [
-												"xray",
-												"cloud",
-												"xpand-it",
-												"com"
-											],
-											"path": [
-												"api",
-												"v1",
-												"backup",
-												"{{backup_jobId}}",
-												"status"
-											]
-										}
-									},
-									"status": "Not Found",
-									"code": 404,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Cache-Control",
-											"value": "no-store, no-cache, must-revalidate, proxy-revalidate"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Date",
-											"value": "Fri, 19 Jun 2020 08:51:48 GMT"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"1a-oA8cmcuVj6EA7J4YWzCAP5nJBT4\""
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Retry-After",
-											"value": "19.862"
-										},
-										{
-											"key": "Surrogate-Control",
-											"value": "no-store"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "Express"
-										},
-										{
-											"key": "X-RateLimit-Limit",
-											"value": "60"
-										},
-										{
-											"key": "X-RateLimit-Remaining",
-											"value": "53"
-										},
-										{
-											"key": "X-RateLimit-Reset",
-											"value": "Fri Jun 19 2020 08:52:08 GMT+0000 (Coordinated Universal Time)"
-										},
-										{
-											"key": "Content-Length",
-											"value": "26"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"error\": \"job not found.\"\n}"
-								},
 								{
 									"name": "get backup status - success",
 									"originalRequest": {
@@ -1200,6 +1059,102 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"status\": \"successful\",\n    \"fileUrl\": \"https://xray.cloud.xpand-it.com/api/v1/backup/file\"\n}"
+								},
+								{
+									"name": "get backup status - job not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://xray.cloud.xpand-it.com/api/v1/backup/{{backup_jobId}}/status",
+											"protocol": "https",
+											"host": [
+												"xray",
+												"cloud",
+												"xpand-it",
+												"com"
+											],
+											"path": [
+												"api",
+												"v1",
+												"backup",
+												"{{backup_jobId}}",
+												"status"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Cache-Control",
+											"value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 19 Jun 2020 08:51:48 GMT"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1a-oA8cmcuVj6EA7J4YWzCAP5nJBT4\""
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Retry-After",
+											"value": "19.862"
+										},
+										{
+											"key": "Surrogate-Control",
+											"value": "no-store"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "53"
+										},
+										{
+											"key": "X-RateLimit-Reset",
+											"value": "Fri Jun 19 2020 08:52:08 GMT+0000 (Coordinated Universal Time)"
+										},
+										{
+											"key": "Content-Length",
+											"value": "26"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": \"job not found.\"\n}"
 								}
 							]
 						},
@@ -1209,7 +1164,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8ef8f51f-ee4f-4d12-8b8f-b4710de9d045",
 										"exec": [
 											"pm.test(\"backup returned\", function () {",
 											"    pm.response.to.have.header(\"Content-Type\");",
@@ -1259,9 +1213,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "import tests",
@@ -1272,7 +1224,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a5aa5d0b-1028-48ca-8a7c-58cff6247ddf",
 										"exec": [
 											"    pm.test(\"data returned\", function () {",
 											"    var jsonData = pm.response.json();",
@@ -1320,7 +1271,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "98b1fc1f-d360-4ba1-a9bb-b6c120e1107f",
 										"exec": [
 											"pm.test(\"job status returned\", function () {",
 											"    var jsonData = pm.response.json();",
@@ -1362,12 +1312,9 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "execution results",
@@ -1384,7 +1331,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "32a728cc-8d05-44ee-b217-24d6e78dba8a",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -1424,9 +1370,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Cucumber",
@@ -1437,7 +1381,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "1c728c99-70ca-49a5-b7a5-10637468c1c7",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -1484,9 +1427,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "JUnit",
@@ -1497,7 +1438,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "a14ca18e-cbff-4c57-927d-0c19854ad018",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -1519,9 +1459,6 @@
 											"mode": "file",
 											"file": {
 												"src": "junit_sample.xml"
-											},
-											"options": {
-												"file": {}
 											}
 										},
 										"url": {
@@ -1544,9 +1481,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "TestNG",
@@ -1557,7 +1492,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "ac2d178c-c8cf-4110-a138-0b9a9468d6af",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -1579,9 +1513,6 @@
 											"mode": "file",
 											"file": {
 												"src": "testng_sample.xml"
-											},
-											"options": {
-												"file": {}
 											}
 										},
 										"url": {
@@ -1604,9 +1535,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "NUnit",
@@ -1617,7 +1546,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "bcc67a06-3d45-4897-af71-9021f6d991a6",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -1639,9 +1567,6 @@
 											"mode": "file",
 											"file": {
 												"src": "nunit_sample.xml"
-											},
-											"options": {
-												"file": {}
 											}
 										},
 										"url": {
@@ -1664,9 +1589,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "xUnit",
@@ -1677,7 +1600,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b760e137-e3b6-4f76-a4b2-eb6355f72e3a",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -1699,9 +1621,6 @@
 											"mode": "file",
 											"file": {
 												"src": "xunit_sample.xml"
-											},
-											"options": {
-												"file": {}
 											}
 										},
 										"url": {
@@ -1724,9 +1643,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Robot Framework",
@@ -1737,7 +1654,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "01d0fab0-bce7-406e-9808-6ed0f3b49d82",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -1759,9 +1675,6 @@
 											"mode": "file",
 											"file": {
 												"src": "robot_sample.xml"
-											},
-											"options": {
-												"file": {}
 											}
 										},
 										"url": {
@@ -1784,20 +1697,15 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				}
 			],
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "c08fefb1-a20a-4c87-b2e1-9fb7a0d84355",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1807,15 +1715,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d4db93c1-7777-4085-be4a-4001e53f81ee",
 						"type": "text/javascript",
 						"exec": [
 							""
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "GraphQL",
@@ -1832,7 +1738,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "6e441209-13fa-4106-8845-7c9a32f3877a",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -1867,9 +1772,6 @@
 											"graphql": {
 												"query": "mutation {\n    createTest(\n        testType: { name: \"Manual\" },\n        steps: [\n            {\n                action: \"Create first example step\",\n                result: \"First step was created\"\n            },\n            {\n                action: \"Create second example step with data\",\n                data: \"Data for the step\",\n                result: \"Second step was created with data\"\n            }\n        ],\n        jira: {\n            fields: { summary:\"Manual Test\", project: {key: \"CALC\"} }\n        }\n    ) {\n        test {\n            issueId\n            testType {\n                name\n            }\n            steps {\n                action\n                data\n                result\n            }\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -1891,7 +1793,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "9925b193-83b2-4d5e-85b0-41ca759c05d5",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -1925,9 +1826,6 @@
 											"graphql": {
 												"query": "mutation {\n    createTest(\n        testType: { name: \"Generic\" },\n        unstructured: \"Perform exploratory tests on calculator.\",\n        jira: {\n            fields: { summary:\"Exploratory Test\", project: {key: \"{{PROJECT_KEY}}\"} }\n        }\n    ) {\n        test {\n            issueId\n            testType {\n                name\n            }\n            unstructured\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -1949,7 +1847,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2c2bb3d8-4032-4d90-81ab-a5c9c3558ea9",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -1983,9 +1880,6 @@
 											"graphql": {
 												"query": "mutation {\n    createTest(\n        testType: { name: \"Cucumber\" },\n        gherkin: \"Given I have entered <input_1> into the calculator\\nAnd I have entered <input_2> into the calculator\\nWhen I press <button>\\nThen the result should be <output> on the screen\\n\\n  Examples:\\n    | input_1 | input_2 | button | output |\\n    | 20      | 30      | add    | 50     |\\n    | 2       | 5       | add    | 7      |\",\n        jira: {\n            fields: { summary:\"Sum of two numbers\", project: {key: \"{{PROJECT_KEY}}\"} }\n        }\n    ) {\n        test {\n            issueId\n            testType {\n                name\n            }\n            gherkin\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2001,9 +1895,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "query details",
@@ -2014,7 +1906,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "9ea33128-3ad4-494b-9f64-07b1fcbfb1d0",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2051,9 +1942,6 @@
 											"graphql": {
 												"query": "{\n  getTests(jql: \"project={{PROJECT_KEY}}\", limit: 50) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      testType {\n          name\n          kind\n      },\n      steps {\n          id\n          data\n          action\n          result\n          attachments {\n              id\n              filename\n          }\n      },\n      preconditions(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n        }\n      }\n    }\n  }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2075,7 +1963,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c07eae9a-aee6-4fcc-b555-ad9f7300ae51",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2113,9 +2000,6 @@
 											"graphql": {
 												"query": "{\n  getTests(jql: \"key={{T1_KEY}}\", limit: 50) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      testType {\n          name\n          kind\n      },\n      steps {\n          id\n          data\n          action\n          result\n          attachments {\n              id\n              filename\n          }\n      },\n      preconditions(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          projectId\n          jira(fields: [\"key\"])\n        }\n      }\n    }\n  }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2137,7 +2021,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5242e639-ffdb-40c5-bcf5-d36d02e862b3",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2174,9 +2057,6 @@
 											"graphql": {
 												"query": "{\n    getTest(issueId: \"{{T1_ID}}\") {\n        issueId\n        testType {\n            name\n            kind\n        },\n        jira(fields: [\"key\"]),\n        steps {\n            id\n            data\n            action\n            result\n            attachments {\n                id\n                filename\n            }\n        },\n        preconditions(limit: 10) {\n          total\n          start\n          limit\n          results {\n            issueId\n            jira(fields: [\"key\"])\n          }\n      }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2197,7 +2077,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "82ffcd71-50d0-43f9-9f46-af93fc4f1555",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2207,16 +2086,13 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "29d0d270-7e87-4239-ad52-296b27ec295a",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "test steps",
@@ -2227,7 +2103,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "f2668f66-f09b-4a8b-8668-c6937d4866d5",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2265,9 +2140,6 @@
 											"graphql": {
 												"query": "{\n    getTest(issueId: \"{{T1_ID}}\") {\n        steps {\n            id\n            data\n            action\n            result\n            attachments {\n                id\n                filename\n            }\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2289,7 +2161,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "d67c7e5b-2014-4ec5-bbf2-e43f4761ac74",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2329,9 +2200,6 @@
 											"graphql": {
 												"query": "mutation {\n    addTestStep(\n        issueId: \"{{T1_ID}}\",\n        step: {\n            action: \"example step5\",\n            data: \"example data5\"\n            result: \"example result5\",\n            attachments:[\n                    {\n                        data:\"ZHVtbXkgY29udGVudA==\",\n                        filename:\"dummy.txt\",\n                        mimeType:\"text/plain\"\n                    }\n            ]\n        }\n    ) {\n        id\n        action\n        data\n        result\n        attachments {\n            id\n            filename\n            storedInJira\n            downloadLink\n        }\n    }\n}\n",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2352,7 +2220,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "38123790-5132-4d93-84f2-892de486e655",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2387,9 +2254,6 @@
 											"graphql": {
 												"query": "mutation {\n    updateTestStep(\n        stepId: \"{{T1_NEWSTEP_ID}}\",\n        step: {\n            action: \"example step5x\",\n            data: \"example data5x\"\n            result: \"example result5x\",\n            attachments:\n                { \n                    add: {\n                        data:\"ZHVtbXkgY29udGVudA==\",\n                        filename:\"dummy.txt\",\n                        mimeType:\"text/plain\"\n                    }\n                }\n            \n        }\n    ) {\n        addedAttachments\n        warnings\n    }\n}\n",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2410,7 +2274,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "f930cd36-21de-4376-9561-85a7800a0a9f",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2445,9 +2308,6 @@
 											"graphql": {
 												"query": "mutation {\n    updateTestStep(\n        stepId: \"{{T1_NEWSTEP_ID}}\",\n        step: {\n            attachments:\n                { \n                    removeIds: [\"{{T1_NEWSTEP_ATTACH1_ID}}\"]\n                }\n            \n        }\n    ) {\n        removedAttachments\n        warnings\n    }\n}\n",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2468,7 +2328,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "accd6464-c873-45ae-843a-a09a249281de",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2503,9 +2362,6 @@
 											"graphql": {
 												"query": "mutation {\n    updateTestStep(\n        stepId: \"{{T1_NEWSTEP_ID}}\",\n        step: {\n            attachments:\n                { \n                    removeFilenames: [\"dummy.txt\"]\n                }\n            \n        }\n    ) {\n        removedAttachments\n        warnings\n    }\n}\n",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2526,7 +2382,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "d7335c00-8ff7-44ec-8ce3-28a0e13d0aa9",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2560,9 +2415,6 @@
 											"graphql": {
 												"query": "mutation {\n    removeTestStep(\n        stepId: \"{{T1_NEWSTEP_ID}}\"\n    )\n}\n",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2577,9 +2429,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "modify details",
@@ -2590,7 +2440,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "a48d0445-7de6-4660-96a6-1df00fbe467d",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2624,9 +2473,6 @@
 											"graphql": {
 												"query": "mutation {\n    updateUnstructuredTestDefinition(issueId: \"{{T3_ID}}\", unstructured: \"Generic definition\" ) {\n        issueId\n        unstructured\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2647,7 +2493,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "f9eb0587-7ec3-43ac-9703-1b580b1cd4a6",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2681,9 +2526,6 @@
 											"graphql": {
 												"query": "mutation {\n    updateGherkinTestDefinition(\n        issueId: \"{{T2_ID}}\",\n        gherkin: \"Given I have entered <input_1> into the calculator\\nAnd I have entered <input_2> into the calculator\\nWhen I press <button>\\nThen the result should be <output> on the screen\\n\\n  Examples:\\n    | input_1 | input_2 | button | output |\\n    | 20      | 30      | add    | 50     |\\n    | 2       | 5       | add    | 7      |\\n    | 3       | 6       | add    | 9      |\" ) \n        {\n        issueId\n        gherkin\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2703,7 +2545,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "4d4f09d8-aa19-4e6f-b012-6b9588fda238",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -2713,16 +2554,13 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a67b3da8-bdfa-4e9c-8ccb-0ac9b040a095",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "relations",
@@ -2733,7 +2571,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8b5b1751-3925-44aa-9a21-9399cda2255c",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2770,9 +2607,6 @@
 											"graphql": {
 												"query": "{\n    getTest(issueId: \"{{T1_ID}}\") {\n        issueId\n        testType {\n            name\n            kind\n        },\n        jira(fields: [\"key\"]),\n        preconditions(limit: 10) {\n          total\n          start\n          limit\n          results {\n            issueId\n            jira(fields: [\"key\"])\n            preconditionType {\n                name\n                kind\n            }\n            definition\n          }\n      }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2793,7 +2627,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "3f797dd2-3e38-42c2-920a-759462b22824",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2830,9 +2663,6 @@
 											"graphql": {
 												"query": "{\n    getTest(issueId: \"{{T1_ID}}\") {\n        issueId\n        testType {\n            name\n            kind\n        },\n        jira(fields: [\"key\"]),\n        testSets(limit: 10) {\n          total\n          start\n          limit\n          results {\n            issueId\n            jira(fields: [\"key\"])\n          }\n      }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2853,7 +2683,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "915bfe65-806c-47df-89a1-28c21ba7b296",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2890,9 +2719,6 @@
 											"graphql": {
 												"query": "{\n    getTest(issueId: \"{{T1_ID}}\") {\n        issueId\n        testType {\n            name\n            kind\n        },\n        jira(fields: [\"key\"]),\n        testExecutions(limit: 10) {\n          total\n          start\n          limit\n          results {\n            issueId\n            jira(fields: [\"key\"])\n          }\n      }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2913,7 +2739,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "187e3571-fa6f-45d3-9967-5f515f163687",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -2950,9 +2775,6 @@
 											"graphql": {
 												"query": "{\n    getTest(issueId: \"{{T1_ID}}\") {\n        issueId\n        testType {\n            name\n            kind\n        },\n        jira(fields: [\"key\"]),\n        testPlans(limit: 10) {\n          total\n          start\n          limit\n          results {\n            issueId\n            jira(fields: [\"key\"])\n          }\n      }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -2967,9 +2789,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "test repository",
@@ -2980,7 +2800,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "bd0b837c-1ed0-4229-a87b-3d52f71bf86e",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3015,9 +2834,6 @@
 											"graphql": {
 												"query": "mutation {\n    updateTestFolder(\n        issueId: \"{{T1_ID}}\",\n        folderPath: \"/\"\n    )\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3032,9 +2848,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "delete",
@@ -3045,7 +2859,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "be34fc96-f105-451f-ab2d-e31e277371f2",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3079,9 +2892,6 @@
 											"graphql": {
 												"query": "mutation {\n    deleteTest(issueId: \"{{TEMP_TEST1_ID}}\")\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3102,7 +2912,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "8c6db41b-8362-4047-bd7c-2e7ab68c8c31",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3112,20 +2921,15 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "10333a82-8a03-4fff-bce9-c45e43675b76",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "preconditions",
@@ -3139,7 +2943,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "17e5d1d0-bfdb-4d99-87cf-1cf6c616dfcc",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3174,9 +2977,6 @@
 											"graphql": {
 												"query": "mutation {\n    createPrecondition(\n        preconditionType: { name: \"Manual\" }\n        definition: \"calculator turned on\"\n        jira: {\n            fields: { summary:\"TEMP_PRECONDITION1_ID\", project: {key: \"{{PROJECT_KEY}}\"} }\n        }\n    ) {\n        precondition {\n            issueId\n            preconditionType {\n                name\n            }\n            definition\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3198,7 +2998,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "e793e76b-a537-40a4-b003-26f9656776d3",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3232,9 +3031,6 @@
 											"graphql": {
 												"query": "mutation {\n    createPrecondition(\n        preconditionType: { name: \"Generic\" }\n        definition: \"calculator turned on\"\n        jira: {\n            fields: { summary:\"Generic Precondition\", project: {key: \"{{PROJECT_KEY}}\"} }\n        }\n    ) {\n        precondition {\n            issueId\n            preconditionType {\n                name\n            }\n            definition\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3256,7 +3052,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "6ca9f365-9757-4aa8-9650-0e90cbb98b01",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3290,9 +3085,6 @@
 											"graphql": {
 												"query": "mutation {\n    createPrecondition(\n        preconditionType: { name: \"Cucumber\" }\n        definition: \"Given I have a calculator\"\n        jira: {\n            fields: { summary:\"Calculator exists\", project: {key: \"{{PROJECT_KEY}}\"} }\n        }\n    ) {\n        precondition {\n            issueId\n            preconditionType {\n                name\n            }\n            definition\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3308,9 +3100,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "query details",
@@ -3321,7 +3111,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "959c0109-7828-4fa0-b0e3-fafa52bf3ddd",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3358,9 +3147,6 @@
 											"graphql": {
 												"query": "{\n  getPreconditions(jql: \"project={{PROJECT_KEY}}\", limit: 50) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      preconditionType {\n          name\n          kind\n      }\n      definition\n      tests(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n          testType {\n              name\n              kind\n          }\n        }\n      }\n    }\n  }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3382,7 +3168,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "22d1bf40-67ec-460b-bd6d-5fb6d789faea",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3420,9 +3205,6 @@
 											"graphql": {
 												"query": "{\n  getPreconditions(jql: \"key={{P1_KEY}}\", limit: 1) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      preconditionType {\n          name\n          kind\n      }\n      definition\n      tests(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n          testType {\n              name\n              kind\n          }\n        }\n      }\n    }\n  }\n}\n",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3444,7 +3226,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "034a6a6d-223d-4643-9b7b-4cf6dba5f62c",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3481,9 +3262,6 @@
 											"graphql": {
 												"query": "{\n    getPrecondition(issueId: \"{{P1_ID}}\") {\n        issueId\n        jira(fields: [\"key\"])\n        preconditionType {\n            name\n            kind\n        }\n        definition\n        tests(limit: 10) {\n            total\n            start\n            limit\n            results {\n            issueId\n            jira(fields: [\"key\"])\n            projectId\n            testType {\n                name\n                kind\n            }\n            }\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3504,7 +3282,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "f82aa23a-4713-499c-965d-47c9cd12133e",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3514,16 +3291,13 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ce14ef70-9d02-4486-ad0a-9436d504e8de",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "relations",
@@ -3534,7 +3308,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4769429f-fc6b-4a4a-bd4f-d4d1a613f57a",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3569,9 +3342,6 @@
 											"graphql": {
 												"query": "mutation {\n    addTestsToPrecondition(\n        issueId: \"{{P1_ID}}\",\n        testIssueIds: [\"{{T1_ID}}\"]\n    ) {\n        addedTests\n        warning\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3592,7 +3362,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "060d1466-e222-48b4-8d7b-988dda7ed45e",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3629,9 +3398,6 @@
 											"graphql": {
 												"query": "{\n    getPrecondition(issueId: \"{{P1_ID}}\") {\n        issueId\n        jira(fields: [\"key\"])\n        tests(limit: 10) {\n            total\n            start\n            limit\n            results {\n                issueId\n                jira(fields: [\"key\"])\n                projectId\n                testType {\n                    name\n                    kind\n                }\n            }\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3653,7 +3419,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "25a209be-96a8-4966-bd71-7bb8d6c4fc9f",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3691,9 +3456,6 @@
 											"graphql": {
 												"query": "{\n    getTest(issueId: \"{{T1_ID}}\") {\n        issueId\n        testType {\n            name\n            kind\n        },\n        jira(fields: [\"key\"]),\n        preconditions(limit: 10) {\n          total\n          start\n          limit\n          results {\n            issueId\n            jira(fields: [\"key\"])\n          }\n      }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3714,7 +3476,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c224b507-0626-41a8-bb1a-a23456468080",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3748,9 +3509,6 @@
 											"graphql": {
 												"query": "mutation {\n    removeTestsFromPrecondition(\n        issueId: \"{{P1_ID}}\",\n        testIssueIds: [\"{{T1_ID}}\"]\n    ) \n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3765,9 +3523,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "delete",
@@ -3778,7 +3534,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "68fcd119-dc08-416e-b801-ea326498db80",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3812,9 +3567,6 @@
 											"graphql": {
 												"query": "mutation {\n    deletePrecondition(issueId: \"{{TEMP_PRECONDITION1_ID}}\")\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3829,16 +3581,13 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						}
 					],
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "250e52d6-7c57-4005-8faa-c0000ffedc15",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -3848,16 +3597,13 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a551729a-a366-42a9-b99f-307151677aac",
 								"type": "text/javascript",
 								"exec": [
 									""
 								]
 							}
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "test sets",
@@ -3871,7 +3617,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5df37e38-1873-456e-93b2-e84c9b9bd109",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3906,9 +3651,6 @@
 											"graphql": {
 												"query": "mutation {\n    createTestSet(\n        testIssueIds: []\n        jira: {\n            fields: {\n                summary: \"empty Test Set\",\n                project: {key: \"{{PROJECT_KEY}}\"} \n            }\n        }\n    ) {\n        testSet {\n            issueId\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3929,7 +3671,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "e3350e14-a2b6-4681-88b4-f56f4167884a",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -3964,9 +3705,6 @@
 											"graphql": {
 												"query": "mutation {\n    createTestSet(\n        testIssueIds: [\"{{T1_ID}}\"]\n        jira: {\n            fields: { \n                summary: \"dummy Test Set\", \n                project: {key: \"{{PROJECT_KEY}}\"} \n            }\n        }\n    ) {\n        testSet {\n            issueId\n            jira(fields: [\"key\"])\n            tests(limit: 10) {\n                    total\n                    start\n                    limit\n                    results {\n                        issueId\n                        jira(fields: [\"key\"])\n                        projectId\n                        testType {\n                            name\n                            kind\n                        }\n                    }\n                }            \n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -3981,9 +3719,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "delete",
@@ -3994,7 +3730,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "37b17e18-dea2-4f8a-8c89-462c205981e1",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4028,9 +3763,6 @@
 											"graphql": {
 												"query": "mutation {\n    deleteTestSet(issueId: \"{{TEMP_TESTSET1_ID}}\")\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4050,7 +3782,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "cb849d4f-2166-4bc4-8ad4-090429d57edc",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -4060,16 +3791,13 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "cf562fff-7a23-43e9-9f23-97856d0b0038",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "query details",
@@ -4080,7 +3808,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "efacb01b-3fb7-4d08-b5ab-e6ec5d74a6cd",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4117,9 +3844,6 @@
 											"graphql": {
 												"query": "{\n  getTestSets(jql: \"project={{PROJECT_KEY}}\", limit: 50) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      tests(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n          testType {\n              name\n              kind\n          }\n        }\n      }\n    }\n  }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4141,7 +3865,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c1567300-11f0-4980-9b14-0cc5e7b6233c",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4179,9 +3902,6 @@
 											"graphql": {
 												"query": "{\n  getTestSets(jql: \"key={{TS1_KEY}}\", limit: 1) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      tests(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n          testType {\n              name\n              kind\n          }\n        }\n      }\n    }\n  }\n}\n",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4203,7 +3923,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b2608ffa-3e61-431f-a450-6f0633ea290a",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4240,9 +3959,6 @@
 											"graphql": {
 												"query": "{\n    getTestSet(issueId: \"{{TS1_ID}}\") {\n        issueId\n        jira(fields: [\"key\"])\n        tests(limit: 10) {\n            total\n            start\n            limit\n            results {\n                issueId\n                jira(fields: [\"key\"])\n                projectId\n                testType {\n                    name\n                    kind\n                }\n            }\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4263,7 +3979,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3d8435a2-5be7-4082-966d-e39fbb628ed5",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -4273,16 +3988,13 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "34f65909-918c-49f3-b88e-7a50675e787f",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "relations",
@@ -4293,7 +4005,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "308a7608-378e-461a-a107-4915e7348fc9",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4328,9 +4039,6 @@
 											"graphql": {
 												"query": "mutation {\n    addTestsToTestSet(\n        issueId: \"{{TS1_ID}}\",\n        testIssueIds: [\"{{T1_ID}}\"]\n    ) {\n        addedTests\n        warning\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4351,7 +4059,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "e1f6df17-2ad7-4665-b9a4-52d69bb14f3e",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4389,9 +4096,6 @@
 											"graphql": {
 												"query": "{\n    getTestSet(issueId: \"{{TS1_ID}}\") {\n        issueId\n        jira(fields: [\"key\"])\n        tests(limit: 10) {\n            total\n            start\n            limit\n            results {\n                issueId\n                jira(fields: [\"key\"])\n                projectId\n                testType {\n                    name\n                    kind\n                }\n            }\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4412,7 +4116,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "52bc2684-13f3-4148-9716-0e23c3234650",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4450,9 +4153,6 @@
 											"graphql": {
 												"query": "{\n    getTest(issueId: \"{{T1_ID}}\") {\n        issueId\n        testType {\n            name\n            kind\n        },\n        jira(fields: [\"key\"]),\n        testSets(limit: 10) {\n          total\n          start\n          limit\n          results {\n            issueId\n            jira(fields: [\"key\"])\n          }\n      }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4473,7 +4173,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "48d6d2e2-01de-4a41-a236-ce1f21679721",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4507,9 +4206,6 @@
 											"graphql": {
 												"query": "mutation {\n    removeTestsFromTestSet(\n        issueId: \"{{TS1_ID}}\",\n        testIssueIds: [\"{{T1_ID}}\"]\n    ) \n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4524,16 +4220,13 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						}
 					],
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "3c9f1102-0027-4a2e-beb5-8d92ffc601db",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4543,16 +4236,13 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "646c678b-9eed-427a-a697-258a5b826f3f",
 								"type": "text/javascript",
 								"exec": [
 									""
 								]
 							}
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "test executions",
@@ -4566,7 +4256,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8a4e7690-c0f2-4206-91d8-dc900f139a2f",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4601,9 +4290,6 @@
 											"graphql": {
 												"query": "mutation {\n    createTestExecution(\n        testIssueIds: []\n        jira: {\n            fields: {\n                summary: \"empty Test Execution\",\n                project: {key: \"{{PROJECT_KEY}}\"} \n            }\n        }\n    ) {\n        testExecution {\n            issueId\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4624,7 +4310,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8c2d7546-28f1-4b77-a686-317c9f7309f4",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4660,9 +4345,6 @@
 											"graphql": {
 												"query": "mutation {\n    createTestExecution(\n        testIssueIds: [\"{{T1_ID}}\"],\n        testEnvironments: [\"chrome\"]\n        jira: {\n            fields: { \n                summary: \"dummy Test Execution\", \n                project: {key: \"{{PROJECT_KEY}}\"},\n                fixVersions: [ {name: \"{{PROJECT_VERSION}}\"} ]\n            }\n        }\n    ) {\n        testExecution {\n            issueId\n            jira(fields: [\"key\"])\n            tests(limit: 10) {\n                    total\n                    start\n                    limit\n                    results {\n                        issueId\n                        jira(fields: [\"key\"])\n                        projectId\n                        testType {\n                            name\n                            kind\n                        }\n                    }\n                }            \n        }\n        warnings\n        createdTestEnvironments\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4677,9 +4359,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "query details",
@@ -4690,7 +4370,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "fba5be4b-1473-4c86-be5a-e36b60cf0d6d",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4727,9 +4406,6 @@
 											"graphql": {
 												"query": "{\n  getTestExecutions(jql: \"project={{PROJECT_KEY}}\", limit: 50) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      tests(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n          testType {\n              name\n              kind\n          }\n        }\n      }\n    }\n  }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4751,7 +4427,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "01d7a76c-16fc-4796-ac42-36302df8e5f5",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4789,9 +4464,6 @@
 											"graphql": {
 												"query": "{\n  getTestExecutions(jql: \"key={{TE1_KEY}}\", limit: 1) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      tests(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n          testType {\n              name\n              kind\n          }\n        }\n      }\n    }\n  }\n}\n",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4813,7 +4485,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b5705243-c8a4-4377-8f36-1c0b8cd65f7f",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -4850,9 +4521,6 @@
 											"graphql": {
 												"query": "{\n    getTestExecution(issueId: \"{{TE1_ID}}\") {\n        issueId\n        jira(fields: [\"key\"])\n        tests(limit: 10) {\n            total\n            start\n            limit\n            results {\n                issueId\n                jira(fields: [\"key\"])\n                projectId\n                testType {\n                    name\n                    kind\n                }\n            }\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -4873,7 +4541,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "95577038-af3c-42bd-8aa8-45d2ff274220",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -4883,16 +4550,13 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "75bfb980-91ef-495d-972c-9c640ffe849b",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "relations",
@@ -4906,7 +4570,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "f7bf5c0e-3a60-45db-a842-4270a4c558e6",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -4941,9 +4604,6 @@
 													"graphql": {
 														"query": "mutation {\n    addTestsToTestExecution(\n        issueId: \"{{TEMP_TESTEXEC1_ID1}}\",\n        testIssueIds: [\"{{T1_ID}}\"]\n    ) {\n        addedTests\n        warning\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -4964,7 +4624,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "89151487-a81d-4ac0-9e20-45e1f55fc7df",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -5002,9 +4661,6 @@
 													"graphql": {
 														"query": "{\n    getTestExecution(issueId: \"{{TE1_ID}}\") {\n        issueId\n        jira(fields: [\"key\"])\n        tests(limit: 10) {\n            total\n            start\n            limit\n            results {\n                issueId\n                jira(fields: [\"key\"])\n                projectId\n                testType {\n                    name\n                    kind\n                }\n            }\n        }\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -5025,7 +4681,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "4ae4f85a-9248-4084-a161-b605be8d3a03",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -5063,9 +4718,6 @@
 													"graphql": {
 														"query": "{\n    getTest(issueId: \"{{T1_ID}}\") {\n        issueId\n        testType {\n            name\n            kind\n        },\n        jira(fields: [\"key\"]),\n        testExecutions(limit: 10) {\n          total\n          start\n          limit\n          results {\n            issueId\n            jira(fields: [\"key\"])\n          }\n      }\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -5086,7 +4738,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "612872d4-9407-4f83-8e20-fdab044dae9f",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -5120,9 +4771,6 @@
 													"graphql": {
 														"query": "mutation {\n    removeTestsFromTestExecution(\n        issueId: \"{{TEMP_TESTEXEC1_ID}}\",\n        testIssueIds: [\"{{T1_ID}}\"]\n    ) \n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -5137,9 +4785,7 @@
 											},
 											"response": []
 										}
-									],
-									"protocolProfileBehavior": {},
-									"_postman_isSubFolder": true
+									]
 								},
 								{
 									"name": "test runs",
@@ -5150,7 +4796,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "e0f0a7aa-17b3-4772-94ac-a15c828cd1bd",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -5188,9 +4833,6 @@
 													"graphql": {
 														"query": "{\n    getTestExecution(issueId: \"{{TE1_ID}}\") {\n        issueId\n        jira(fields: [\"key\"])\n    \n          testRuns(limit: 100){\n            results{\n              id\n              status{\n                name\n                description\n              }\n              comment\n              testType{\n                name\n              }\n              evidence{\n                filename\n              }\n              defects\n              executedById\n              startedOn\n              finishedOn\n              assigneeId\n\n              steps {\n                  id\n                  action\n                  data\n                  result\n              }\n\n              scenarioType\n              gherkin\n              examples {\n                  id\n                  status {\n                      name\n                      description\n                  }\n                  duration\n              }\n\n              unstructured\n              \n              customFields {\n                  id\n                  name\n                  values\n              }\n\n              preconditions(limit:10) {\n                results{\n                    preconditionRef {\n                        issueId\n                        jira(fields: [\"key\"])\n                    }\n                    definition\n                }\n              }\n              test {\n                  issueId\n                  jira(fields: [\"key\"])\n                    projectId\n                    testType {\n                        name\n                        kind\n                    }\n              }\n              \n            }\n        }\n\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -5206,13 +4848,9 @@
 											},
 											"response": []
 										}
-									],
-									"protocolProfileBehavior": {},
-									"_postman_isSubFolder": true
+									]
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "delete",
@@ -5223,7 +4861,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "d9f699be-27e2-4c20-a528-1c64e858d5fa",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5257,9 +4894,6 @@
 											"graphql": {
 												"query": "mutation {\n    deleteTestExecution(issueId: \"{{TEMP_TESTEXEC1_ID}}\")\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5279,7 +4913,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a4dffa45-2dfc-4347-9936-c1467c956b63",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -5289,23 +4922,19 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ecef85d4-1439-4e09-82d7-fbb148d1b000",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						}
 					],
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "194decd5-662f-4b8d-bf58-9be170bb3698",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5315,16 +4944,13 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7fc3882f-1703-4187-aeb7-8979a5fa3df2",
 								"type": "text/javascript",
 								"exec": [
 									""
 								]
 							}
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "test runs",
@@ -5338,7 +4964,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "62607485-c5e7-41ce-a414-39d1995d96b7",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5390,9 +5015,6 @@
 											"graphql": {
 												"query": "{\n    getTestRuns( testIssueIds: [\"{{T1_ID}}\", \"{{T2_ID}}\", \"{{T3_ID}}\" ], testExecIssueIds: [\"{{TE1_ID}}\"], limit: 100 ) {\n        total\n        limit\n        start\n        results {\n            id\n            status {\n                name\n                color\n                description\n            }\n            gherkin\n            examples {\n                id\n                status {\n                name\n                color\n                description\n                }\n            }\n            test {\n                issueId\n                jira(fields: [\"key\"])\n            }\n            testExecution {\n                issueId\n                jira(fields: [\"key\"])\n            }\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5407,9 +5029,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "details",
@@ -5420,7 +5040,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5b5ba408-7365-4d92-b6dd-5bb23d366159",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5457,9 +5076,6 @@
 											"graphql": {
 												"query": "{\n    getTestRunById( id: \"{{TR1_ID}}\") {\n        id\n        status {\n            name\n            color\n            description\n        }\n        steps {\n            action\n            data\n            result\n            attachments {\n                id\n                filename\n            }\n            status {\n                name\n                color\n            }\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5480,7 +5096,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "9226f251-84f1-4da5-8f4c-9dd0ded27c46",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5517,9 +5132,6 @@
 											"graphql": {
 												"query": "{\n    getTestRun( testIssueId: \"{{T1_ID}}\", testExecIssueId: \"{{TE1_ID}}\") {\n        id\n        status {\n            name\n            color\n            description\n        }\n        steps {\n            action\n            data\n            result\n            attachments {\n                id\n                filename\n            }\n            status {\n                name\n                color\n            }\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5540,7 +5152,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4027bb39-fb2f-4314-a048-db609c06135c",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5574,9 +5185,6 @@
 											"graphql": {
 												"query": "mutation {\n    updateTestRun( \n            id: \"{{TR1_ID}}\",\n            comment: \"Everything is OK.\"\n        )  {\n            warnings\n        }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5591,9 +5199,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "status",
@@ -5604,7 +5210,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "0ddc3460-52ec-4e78-b2ac-a45d7bc04dce",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5641,9 +5246,6 @@
 											"graphql": {
 												"query": "{\n    getTestRunById( id: \"{{TR3_ID}}\") {\n        status {\n            name\n            color\n            description\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5664,7 +5266,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "86b0d440-8a8d-4e7e-ad29-8b31f1aa2fc2",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5698,9 +5299,6 @@
 											"graphql": {
 												"query": "mutation {\n    updateTestRunStatus( \n            id: \"{{TR3_ID}}\",\n            status: \"PASSED\"\n        ) \n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5715,9 +5313,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "defects",
@@ -5728,7 +5324,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "a5219a99-f6a0-46c1-9e8f-ae35f16d4653",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5763,9 +5358,6 @@
 											"graphql": {
 												"query": "mutation {\n    addDefectsToTestRun( \n            id: \"{{TR1_ID}}\",\n            issues: [\"{{D1_KEY}}\"]\n        ) {\n            addedDefects\n            warnings\n        }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5786,7 +5378,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c406552b-21cc-4e28-b6b8-0d88e85b174d",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5823,9 +5414,6 @@
 											"graphql": {
 												"query": "{\n    getTestRunById( id: \"{{TR1_ID}}\") {\n        id\n        defects\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5846,7 +5434,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "336e4ddb-60aa-4f39-96d2-dca99bf3f15b",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5880,9 +5467,6 @@
 											"graphql": {
 												"query": "mutation {\n    removeDefectsFromTestRun( \n            id: \"{{TR1_ID}}\",\n            issues: [\"{{D1_KEY}}\"]\n        ) \n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5897,9 +5481,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "evidence",
@@ -5910,7 +5492,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "cb4b6e3b-227a-4d78-81df-eae2f1214179",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -5948,9 +5529,6 @@
 											"graphql": {
 												"query": "mutation {\n    addEvidenceToTestRun( \n            id: \"{{TR1_ID}}\",\n            evidence: [\n                {\n                data: \"ZHVtbXkgY29udGVudA==\",\n                filename: \"dummy.txt\",\n                mimeType: \"text/plain\"\n                }\n            ]\n        ) {\n            addedEvidence\n            warnings\n        }\n}\n\n\n",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -5971,7 +5549,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5a502445-7f20-4c42-95c7-1af844262007",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -6010,9 +5587,6 @@
 											"graphql": {
 												"query": "{\n    getTestRunById( id: \"{{TR1_ID}}\") {\n        id\n        evidence {\n            id\n            filename\n            storedInJira\n            downloadLink\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -6033,7 +5607,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "73d13a8e-ffc2-4c94-a34c-1333c6b3e8f4",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -6068,9 +5641,6 @@
 											"graphql": {
 												"query": "mutation {\n    removeEvidenceFromTestRun(\n        id: \"{{TR1_ID}}\",\n        evidenceIds: [\"{{TR1_ATTACH1_ID}}\"]\n    ) {\n        removedEvidence\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -6091,7 +5661,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "870ca72e-f273-48cf-b350-5ccf40dfb170",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -6126,9 +5695,6 @@
 											"graphql": {
 												"query": "mutation {\n    removeEvidenceFromTestRun(\n        id: \"{{TR1_ID}}\",\n        evidenceFilenames: [\"dummy.txt\"]\n    ) {\n        removedEvidence\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -6143,9 +5709,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "comment",
@@ -6156,7 +5720,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c8cbef7c-1807-4fb0-82cd-068706e0e014",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -6193,9 +5756,6 @@
 											"graphql": {
 												"query": "{\n    getTestRunById( id: \"{{TR3_ID}}\") {\n        comment\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -6216,7 +5776,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "6f4755a4-2e78-4c96-ad06-f0891753b084",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -6250,9 +5809,6 @@
 											"graphql": {
 												"query": "mutation {\n    updateTestRunComment( \n            id: \"{{TR1_ID}}\",\n            comment: \"My new comment\"\n        )  \n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -6267,9 +5823,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "test step results",
@@ -6283,7 +5837,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "d4fc4283-0479-4ede-b12b-f6c2bd9add37",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6321,9 +5874,6 @@
 													"graphql": {
 														"query": "{\n    getTestRunById( id: \"{{TR1_ID}}\") {\n        steps {\n            id\n            action\n            data\n            result\n            comment\n            evidence {\n                id\n                filename\n            }\n            defects\n            status {\n                name\n                color\n            }\n        }\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6338,9 +5888,7 @@
 											},
 											"response": []
 										}
-									],
-									"protocolProfileBehavior": {},
-									"_postman_isSubFolder": true
+									]
 								},
 								{
 									"name": "status",
@@ -6351,7 +5899,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "d1fe3bef-9915-4c31-ad12-03daf71e9b89",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6385,9 +5932,6 @@
 													"graphql": {
 														"query": "mutation {\n    updateTestRunStepStatus(\n        testRunId: \"{{TR1_ID}}\",\n        stepId: \"{{TR1_STEP1_ID}}\",\n        status: \"FAILED\"\n    ) {\n        warnings\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6402,9 +5946,7 @@
 											},
 											"response": []
 										}
-									],
-									"protocolProfileBehavior": {},
-									"_postman_isSubFolder": true
+									]
 								},
 								{
 									"name": "evidence",
@@ -6415,7 +5957,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "ee765c28-4f56-43ad-96f2-0747967ce136",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6450,9 +5991,6 @@
 													"graphql": {
 														"query": "mutation {\n    addEvidenceToTestRunStep(\n        testRunId: \"{{TR1_ID}}\",\n        stepId: \"{{TR1_STEP1_ID}}\",\n        evidence: [\n            {\n                filename: \"dummy.txt\"\n                mimeType: \"text/plain\"\n                data: \"ZHVtbXkgY29udGVudA==\"\n            }\n        ]\n    ) {\n        addedEvidence\n        warnings\n    }\n}\n",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6473,7 +6011,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "0cd86b30-391d-45b3-a83d-4f3edada7f2a",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6513,9 +6050,6 @@
 													"graphql": {
 														"query": "{\n    getTestRunById( id: \"{{TR1_ID}}\") {\n        steps {\n            id\n            action\n            data\n            result\n            comment\n            evidence {\n                id\n                filename\n            }\n            defects\n            status {\n                name\n                color\n            }\n        }\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6536,7 +6070,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "7de421b9-e215-44b1-acdc-5ffa3c54fbd3",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6571,9 +6104,6 @@
 													"graphql": {
 														"query": "mutation {\n    removeEvidenceFromTestRunStep(\n        testRunId: \"{{TR1_ID}}\",\n        stepId: \"{{TR1_STEP1_ID}}\",\n        evidenceIds: [\"{{TR1_STEP1_ATTACH1_ID}}\"]\n    ) {\n        removedEvidence\n        warnings\n    }\n}\n",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6594,7 +6124,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "e965675d-28de-4602-bc9d-693f92cbd39a",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6629,9 +6158,6 @@
 													"graphql": {
 														"query": "mutation {\n    removeEvidenceFromTestRunStep(\n        testRunId: \"{{TR1_ID}}\",\n        stepId: \"{{TR1_STEP1_ID}}\",\n        evidenceFilenames: [\"dummy.txt\"]\n    ) {\n        removedEvidence\n        warnings\n    }\n}\n",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6646,9 +6172,7 @@
 											},
 											"response": []
 										}
-									],
-									"protocolProfileBehavior": {},
-									"_postman_isSubFolder": true
+									]
 								},
 								{
 									"name": "defects",
@@ -6659,7 +6183,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "ab16892c-3229-42f6-8638-ba096dcb2c1f",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6694,9 +6217,6 @@
 													"graphql": {
 														"query": "mutation {\n    addDefectsToTestRunStep( \n            testRunId: \"{{TR1_ID}}\",\n            stepId: \"{{TR1_STEP1_ID}}\", \n            issues: [\"{{D1_KEY}}\"]\n        ) {\n            addedDefects\n            warnings\n        }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6717,7 +6237,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "9ece20f0-a833-4199-a48e-55ae5132cb6f",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6754,9 +6273,6 @@
 													"graphql": {
 														"query": "{\n    getTestRunById( id: \"{{TR1_ID}}\") {\n        steps {\n            defects\n        }\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6777,7 +6293,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "64f938dd-04d9-4d2c-95c9-e4dbb6a9432d",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6812,9 +6327,6 @@
 													"graphql": {
 														"query": "mutation {\n    removeDefectsFromTestRunStep( \n            testRunId: \"{{TR1_ID}}\",\n            stepId: \"{{TR1_STEP1_ID}}\", \n            issues: [\"{{D1_KEY}}\"]\n        )  {\n        removedDefects\n        warnings\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6829,9 +6341,7 @@
 											},
 											"response": []
 										}
-									],
-									"protocolProfileBehavior": {},
-									"_postman_isSubFolder": true
+									]
 								},
 								{
 									"name": "comment",
@@ -6842,7 +6352,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "10de7f78-186f-482b-b3c9-26fb9a2824e5",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6879,9 +6388,6 @@
 													"graphql": {
 														"query": "{\n    getTestRunById( id: \"{{TR1_ID}}\") {\n        steps {\n            comment\n        }\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6902,7 +6408,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "0cc8058d-e562-4beb-8d7d-92aea8e195d3",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -6936,9 +6441,6 @@
 													"graphql": {
 														"query": "mutation {\n    updateTestRunStepComment(\n        testRunId: \"{{TR1_ID}}\",\n        stepId: \"{{TR1_STEP1_ID}}\",\n        comment: \"it failed\"\n    )\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -6953,13 +6455,9 @@
 											},
 											"response": []
 										}
-									],
-									"protocolProfileBehavior": {},
-									"_postman_isSubFolder": true
+									]
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "cucumber/gherkin scenario outline examples",
@@ -6970,7 +6468,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "9348e17c-1913-4b6f-9ec5-fa74e843feb2",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -7008,9 +6505,6 @@
 											"graphql": {
 												"query": "{\n    getTestRunById( id: \"{{TR2_ID}}\") {\n        id\n        status {\n            name\n            color\n            description\n        }\n        examples {\n            id\n            status {\n                name\n            }\n            duration\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -7031,7 +6525,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "43a686cc-a268-4af2-9995-1af9c5d96aa2",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -7065,9 +6558,6 @@
 											"graphql": {
 												"query": "mutation {\n    updateTestRunExampleStatus(\n        exampleId: \"{{TR2_EXAMPLE1_ID}}\",\n        status: \"PASSED\"\n    ) {\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -7082,13 +6572,9 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "test plans",
@@ -7102,7 +6588,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "ed83f77c-44fa-4478-89b1-ab423d528b0a",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -7137,9 +6622,6 @@
 											"graphql": {
 												"query": "mutation {\n    createTestPlan(\n        testIssueIds: []\n        jira: {\n            fields: {\n                summary: \"empty Test Plan\",\n                project: {key: \"{{PROJECT_KEY}}\"} \n            }\n        }\n    ) {\n        testPlan {\n            issueId\n            jira(fields: [\"key\"])\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -7160,7 +6642,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "6416669d-0288-4ca5-84e4-bf4dbf5b6cc0",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -7196,9 +6677,6 @@
 											"graphql": {
 												"query": "mutation {\n    createTestPlan(\n        testIssueIds: [\"{{T1_ID}}\"]\n        jira: {\n            fields: { \n                summary: \"dummy Test Plan\", \n                project: {key: \"{{PROJECT_KEY}}\"} \n            }\n        }\n    ) {\n        testPlan {\n            issueId\n            jira(fields: [\"key\"])\n            tests(limit: 10) {\n                    total\n                    start\n                    limit\n                    results {\n                        issueId\n                        jira(fields: [\"key\"])\n                        projectId\n                        testType {\n                            name\n                            kind\n                        }\n                    }\n                }            \n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -7213,9 +6691,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "query details",
@@ -7226,7 +6702,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "063bae8f-8488-43b0-a59d-3099341ae3d5",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -7263,9 +6738,6 @@
 											"graphql": {
 												"query": "{\n  getTestPlans(jql: \"project={{PROJECT_KEY}}\", limit: 50) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      tests(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n          testType {\n              name\n              kind\n          }\n          status {\n              name\n          }\n        }\n      }\n    }\n  }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -7287,7 +6759,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "436b516c-4d48-4f78-a7f2-0196bf7c09da",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -7325,9 +6796,6 @@
 											"graphql": {
 												"query": "{\n  getTestPlans(jql: \"key={{TP1_KEY}}\", limit: 1) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      tests(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n          testType {\n              name\n              kind\n          }\n          status {\n              name\n          }\n        }\n      }\n    }\n  }\n}\n",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -7349,7 +6817,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "52bd912c-1120-447b-882c-a228df290e60",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -7386,9 +6853,6 @@
 											"graphql": {
 												"query": "{\n    getTestPlan(issueId: \"{{TP1_ID}}\") {\n        issueId\n        jira(fields: [\"key\"])\n        tests(limit: 10) {\n            total\n            start\n            limit\n            results {\n                issueId\n                jira(fields: [\"key\"])\n                projectId\n                testType {\n                    name\n                    kind\n                }\n                status {\n                    name\n                }\n            }\n        }\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -7409,7 +6873,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "b4e09cce-827f-415d-911c-d94b4c8509eb",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -7419,16 +6882,13 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8f18e5a9-5056-4cb0-b14f-4f76b4e20808",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "relations",
@@ -7442,7 +6902,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "6446b42c-e1f6-4925-a0b4-6df73f82e1a4",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -7477,9 +6936,6 @@
 													"graphql": {
 														"query": "mutation {\n    addTestsToTestPlan(\n        issueId: \"{{TP1_ID}}\",\n        testIssueIds: [\"{{T1_ID}}\"]\n    ) {\n        addedTests\n        warning\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -7500,7 +6956,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "f643ead9-7f3e-40f4-86dd-16bcb532e301",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -7537,9 +6992,6 @@
 													"graphql": {
 														"query": "{\n    getTestPlan(issueId: \"{{TP1_ID}}\") {\n        issueId\n        jira(fields: [\"key\"])\n        tests(limit: 10) {\n            total\n            start\n            limit\n            results {\n                issueId\n                jira(fields: [\"key\"])\n                projectId\n                testType {\n                    name\n                    kind\n                }\n            }\n        }\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -7560,7 +7012,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "20dfdd16-4610-4f9f-a1b7-61f141e027f6",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -7598,9 +7049,6 @@
 													"graphql": {
 														"query": "{\n    getTest(issueId: \"{{T1_ID}}\") {\n        issueId\n        testType {\n            name\n            kind\n        },\n        jira(fields: [\"key\"]),\n        testPlans(limit: 10) {\n          total\n          start\n          limit\n          results {\n            issueId\n            jira(fields: [\"key\"])\n          }\n      }\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -7621,7 +7069,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "9b0dde9b-d935-4fc9-852b-88f02420b437",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -7656,9 +7103,6 @@
 													"graphql": {
 														"query": "mutation {\n    removeTestsFromTestPlan(\n        issueId: \"{{TP1_ID}}\",\n        testIssueIds: [\"{{T1_ID}}\"]\n    ) \n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -7673,9 +7117,7 @@
 											},
 											"response": []
 										}
-									],
-									"protocolProfileBehavior": {},
-									"_postman_isSubFolder": true
+									]
 								},
 								{
 									"name": "test executions",
@@ -7686,7 +7128,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "d9229333-75bd-4568-a7f0-98c6e9d65df0",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -7721,9 +7162,6 @@
 													"graphql": {
 														"query": "mutation {\n    addTestExecutionsToTestPlan(\n        issueId: \"{{TP1_ID}}\",\n        testExecIssueIds: [\"{{TE1_ID}}\"]\n    ) {\n        addedTestExecutions\n        warning\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -7744,7 +7182,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "25815c76-7ea6-43e6-80e6-26ce9189c794",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -7781,9 +7218,6 @@
 													"graphql": {
 														"query": "{\n    getTestPlan(issueId: \"{{TP1_ID}}\") {\n        issueId\n        jira(fields: [\"key\"])\n        testExecutions(limit: 10) {\n            total\n            start\n            limit\n            results {\n                issueId\n                jira(fields: [\"key\"])\n                projectId\n                testEnvironments\n            }\n        }\n    }\n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -7804,7 +7238,6 @@
 												{
 													"listen": "test",
 													"script": {
-														"id": "7423cb63-f72b-4f10-b00f-e76e1cee9192",
 														"exec": [
 															"pm.test(\"Status code is 200\", function () {",
 															"    pm.response.to.have.status(200);",
@@ -7838,9 +7271,6 @@
 													"graphql": {
 														"query": "mutation {\n    removeTestExecutionsFromTestPlan(\n        issueId: \"{{TP1_ID}}\",\n        testExecIssueIds: [\"{{TE1_ID}}\"]\n    ) \n}",
 														"variables": ""
-													},
-													"options": {
-														"graphql": {}
 													}
 												},
 												"url": {
@@ -7855,13 +7285,9 @@
 											},
 											"response": []
 										}
-									],
-									"protocolProfileBehavior": {},
-									"_postman_isSubFolder": true
+									]
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "delete",
@@ -7872,7 +7298,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "027c197b-34e9-4d18-9b50-693976963432",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -7906,9 +7331,6 @@
 											"graphql": {
 												"query": "mutation {\n    deleteTestPlan(issueId: \"{{TEMP_TESTPLAN1_ID}}\")\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -7928,7 +7350,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "4ed540b8-f8a8-4ab2-be25-6d11f16d4321",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -7938,23 +7359,19 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "34d917ad-8340-4068-8b74-ca8f50654cda",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						}
 					],
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "6c9ee601-25d4-4979-b84a-57dd6aad4ae5",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -7964,16 +7381,13 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d1988dc9-2137-4c81-b86d-c59860ea2753",
 								"type": "text/javascript",
 								"exec": [
 									""
 								]
 							}
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "test repository",
@@ -7987,7 +7401,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "adfab64c-41a7-4183-832c-e36802f82483",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -8025,9 +7438,6 @@
 											"graphql": {
 												"query": "{\n    getFolder(projectId: \"{{PROJECT_ID}}\", path: \"/\") {\n        name\n        path\n        testsCount\n        folders\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -8042,9 +7452,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "folders",
@@ -8055,7 +7463,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "97dabf22-f52f-4856-8784-ca51766ae67d",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -8093,9 +7500,6 @@
 											"graphql": {
 												"query": "mutation {\n    createFolder(\n        projectId: \"{{PROJECT_ID}}\"\n        path: \"/Dummy\"\n    ) {\n        folder {\n            name\n            path\n            testsCount\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -8116,7 +7520,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "66c0d310-137a-4d93-bf49-e381aa175fa1",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -8155,9 +7558,6 @@
 											"graphql": {
 												"query": "{\n    getFolder(projectId: \"{{PROJECT_ID}}\", path: \"{{F1_PATH}}\") {\n        name\n        path\n        testsCount\n        #folders\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -8178,7 +7578,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "021cfbe1-164d-48ca-bacb-c957693cd388",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -8214,9 +7613,6 @@
 											"graphql": {
 												"query": "mutation {\n    renameFolder(\n        projectId: \"{{PROJECT_ID}}\",\n        path: \"{{F3_PATH}}\",\n        newName: \"Dummy2\"\n    ) {\n        folder {\n            name\n            path\n            testsCount\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -8237,7 +7633,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "6e3e972b-7fea-41ce-bbcb-093be58c4573",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -8273,9 +7668,6 @@
 											"graphql": {
 												"query": "mutation {\n    moveFolder(\n        projectId: \"{{PROJECT_ID}}\",\n        path: \"{{F3_PATH}}2\",\n        destinationPath: \"/Dummy\"\n    ) {\n        folder {\n            name\n            path\n            testsCount\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -8296,7 +7688,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "6d9fe0a7-511b-45a8-a3ea-47b8627c11f7",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -8331,9 +7722,6 @@
 											"graphql": {
 												"query": "mutation {\n    deleteFolder(\n        projectId: \"{{PROJECT_ID}}\",\n        path: \"{{F3_PATH}}2\"\n    ) \n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -8348,9 +7736,7 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "tests",
@@ -8361,7 +7747,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "ef0ec7d5-d667-4825-bded-b2291fad838d",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -8398,9 +7783,6 @@
 											"graphql": {
 												"query": "{\n  getTests(projectId: \"{{PROJECT_ID}}\", folder: { path: \"{{F1_PATH}}\" , includeDescendants: false }, limit: 50) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      testType {\n          name\n          kind\n      },\n      steps {\n          id\n          data\n          action\n          result\n          attachments {\n              id\n              filename\n          }\n      },\n      preconditions(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n        }\n      }\n    }\n  }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -8421,7 +7803,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "87ed71ee-780b-493d-99eb-6f2dc2685a65",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -8458,9 +7839,6 @@
 											"graphql": {
 												"query": "{\n  getTests(projectId: \"{{PROJECT_ID}}\", folder: { path: \"/\" , includeDescendants: true }, limit: 50) {\n    total\n    start\n    limit\n    results {\n      issueId\n      jira(fields: [\"key\"])\n      projectId\n      testType {\n          name\n          kind\n      },\n      steps {\n          id\n          data\n          action\n          result\n          attachments {\n              id\n              filename\n          }\n      },\n      preconditions(limit: 10) {\n        total\n        start\n        limit\n        results {\n          issueId\n          jira(fields: [\"key\"])\n          projectId\n        }\n      }\n    }\n  }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -8481,7 +7859,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "a981c05c-b140-471f-84dd-f6aef01792fe",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -8516,9 +7893,6 @@
 											"graphql": {
 												"query": "mutation {\n    addTestsToFolder(\n        projectId: \"{{PROJECT_ID}}\",\n        path: \"{{F2_PATH}}\",\n        testIssueIds: [\"{{T4_ID}}\"]\n    ) {\n        folder {\n            name\n            path\n            testsCount\n        }\n        warnings\n    }\n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -8539,7 +7913,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "ea201ee3-cd2d-4778-b02d-18b9f3971882",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
@@ -8574,9 +7947,6 @@
 											"graphql": {
 												"query": "mutation {\n    removeTestsFromFolder(\n        projectId: \"{{PROJECT_ID}}\",\n        testIssueIds: [\"{{T4_ID}}\"]\n    ) \n}",
 												"variables": ""
-											},
-											"options": {
-												"graphql": {}
 											}
 										},
 										"url": {
@@ -8591,13 +7961,9 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "global settings",
@@ -8608,7 +7974,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "26e13201-0940-421d-acc5-e6f0b5849197",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -8645,9 +8010,6 @@
 									"graphql": {
 										"query": "{\n    getIssueLinkTypes {\n            id\n            name\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -8668,7 +8030,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f90ff244-bc75-4998-bf83-219b3a06d143",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -8705,9 +8066,6 @@
 									"graphql": {
 										"query": "{\n    getStatuses {\n        name\n        description\n        color\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -8728,7 +8086,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "74978571-b151-4085-b87e-b223c3cd72a7",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -8765,9 +8122,6 @@
 									"graphql": {
 										"query": "{\n    getStepStatuses {\n        name\n        description\n        color\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -8782,9 +8136,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "project settings",
@@ -8795,7 +8147,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "994f0a6f-ea29-43f9-9104-2d4087ac1b43",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
@@ -8832,9 +8183,6 @@
 									"graphql": {
 										"query": "{\n    getProjectSettings ( projectIdOrKey: \"{{PROJECT_ID}}\" ) {\n        projectId,\n        testEnvironments,\n        testCoverageSettings {\n            coverableIssueTypeIds\n            epicIssuesRelation\n            issueSubTasksRelation\n            issueLinkTypeId\n            issueLinkTypeDirection\n        }\n        defectIssueTypes\n        testTypeSettings {\n            testTypes {\n                id\n                name\n                kind\n            }\n            defaultTestTypeId\n        }\n    }\n}",
 										"variables": ""
-									},
-									"options": {
-										"graphql": {}
 									}
 								},
 								"url": {
@@ -8849,12 +8197,9 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		}
 	],
 	"auth": {
@@ -8871,7 +8216,6 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ed8668c2-5f91-4f49-8292-c4d55560e1f5",
 				"type": "text/javascript",
 				"exec": [
 					"pm.sendRequest({",
@@ -8895,7 +8239,6 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "1b9823d5-ed0b-4eb1-ba1f-d1d13e3e1da9",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -8905,70 +8248,44 @@
 	],
 	"variable": [
 		{
-			"id": "caedab5a-1eef-47bc-9887-d3d00ca43ee9",
 			"key": "XRAY_API_BASEURL",
 			"value": "https://xray.cloud.xpand-it.com/api/v1"
 		},
 		{
-			"id": "13df90e1-2745-4715-a7d6-1f8d3e5430ff",
 			"key": "PROJECT_KEY",
 			"value": "CALC"
 		},
 		{
-			"id": "c6c36f9a-ed5f-4142-bcf8-cf1e37608877",
-			"key": "JIRA_BASEURL",
-			"value": "https://sergiofreire.atlassian.net"
-		},
-		{
-			"id": "04dca20d-ac5c-4fef-a2a0-3d1bcb495108",
-			"key": "JIRA_USERNAME",
-			"value": "sergio.freire@xpand-it.com"
-		},
-		{
-			"id": "9fff5aca-e8b9-4c03-a184-209da8b576bf",
-			"key": "JIRA_PASSWORD",
-			"value": "To4HpDoalVFTxArIVZLx4404"
-		},
-		{
-			"id": "fd534b5c-5fab-4676-bdeb-69841720f7b6",
 			"key": "TEST_ISSUETYPE_NAME",
 			"value": "Test"
 		},
 		{
-			"id": "dd4c575d-3cea-4769-bccd-98251a47f98b",
 			"key": "PRECONDITION_ISSUETYPE_NAME",
 			"value": "Precondition"
 		},
 		{
-			"id": "6a5a9e45-0a76-4d4e-a694-4f6fa824a53c",
 			"key": "TESTSET_ISSUETYPE_NAME",
 			"value": "Test Set"
 		},
 		{
-			"id": "4da6f34f-b781-4fb8-8d1b-2ef04628028a",
 			"key": "TESTEXECUTION_ISSUETYPE_NAME",
 			"value": "Test Execution"
 		},
 		{
-			"id": "3c423c71-15c4-4f67-8d9d-cf32ef924df5",
 			"key": "TESTPLAN_ISSUETYPE_NAME",
 			"value": "Test Plan"
 		},
 		{
-			"id": "0af24b5a-5809-45b2-9322-0a5818891b5b",
 			"key": "BUG_ISSUETYPE_NAME",
 			"value": "Bug"
 		},
 		{
-			"id": "e438914f-c8f7-4c75-9f8e-d4b5f9540c92",
 			"key": "STORY_ISSUETYPE_NAME",
 			"value": "Story"
 		},
 		{
-			"id": "e45aa10e-0ee2-4ba0-b644-debb433e7b9e",
 			"key": "PROJECT_VERSION",
 			"value": "v3.0"
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
