@@ -1,0 +1,45 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: CI with Xray server/DC
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      BROWSER: firefox
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Run tests using newman
+      run: npm install && npm test
+    - name: generate auxiliary file to define fields on the Test Execution
+      run: |
+        cat xrayserver.postman_environment.json.template  | sed s/JIRA_BASEURL_VALUE/${{ secrets.JIRASERVER_BASE_URL }}/g | sed s/JIRA_USERNAME_VALUE/${{ secrets.JIRASERVER_USERNAME }}/g |  sed s/JIRA_PASSWORD_VALUE/${{ secrets.JIRASERVER_PASSWORD }}/g > xrayserver.postman_environment.json
+    - name: "Import results to Xray (server/DC)"
+      uses: mikepenz/xray-action@v1.1.0
+      with:
+         username: ${{ secrets.JIRASERVER_USERNAME }}
+         password: ${{ secrets.JIRASERVER_PASSWORD }}
+         xrayCloud: "false"
+         xrayBaseUrl: ${{ secrets.JIRASERVER_BASE_URL }}
+         testFormat: "nunit"
+         testPaths: "**/TestResults/*.xml"
+         testPlanKey: "${{ secrets.XRAYSERVER_TEST_PLAN_KEY }}"
+         projectKey: "${{ secrets.JIRASERVER_PROJECT_KEY }}"
