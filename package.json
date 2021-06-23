@@ -1,0 +1,26 @@
+{
+  "name": "xray-postman-collections",
+  "version": "1.0.0",
+  "description": "Xray Postman Collections",
+  "main": "",
+  "scripts": {
+    "test": "npx run newman run Xray\\ REST\\ API\\ v2.0.postman_collection.json -r cli,json,junit,junitxray --reporter-json-export newman.json --reporter-junit-export junit.xml --reporter-junitxray-export junit2.xml -e Local\\ VM.postman_environment.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xray-App/xray-postman-collections.git"
+  },
+  "keywords": [
+    "xray"
+  ],
+  "author": "XBlend",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Xray-App/xray-postman-collections/issues"
+  },
+  "homepage": "https://github.com/Xray-App/xray-postman-collections#readme",
+  "dependencies": {
+    "newman": "^5.2.3",
+    "test": "^0.6.0"
+  }
+}
