@@ -40,7 +40,7 @@ jobs:
          password: ${{ secrets.JIRASERVER_PASSWORD }}
          xrayCloud: "false"
          xrayBaseUrl: ${{ secrets.JIRASERVER_BASE_URL }}
-         testFormat: "nunit"
-         testPaths: "**/TestResults/*.xml"
+         testFormat: "junit"
+         testPaths: "**/junit.xml"
          testPlanKey: "${{ secrets.XRAYSERVER_TEST_PLAN_KEY }}"
          projectKey: "${{ secrets.JIRASERVER_PROJECT_KEY }}"
