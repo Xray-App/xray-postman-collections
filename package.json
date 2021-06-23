@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/Xray-App/xray-postman-collections#readme",
   "dependencies": {
-    "newman": "^5.2.3",
     "test": "^0.6.0"
+  },
+  "devDependencies": {
+    "newman": "^5.2.3"
   }
 }
