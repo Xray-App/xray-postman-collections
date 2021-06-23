@@ -31,6 +31,7 @@ jobs:
         ls -la xrayserver.postman_environment.json
         cat xrayserver.postman_environment.json
     - name: Run tests using newman
+      continue-on-error: true
       run: npm install && npm test
     - name: "Import results to Xray (server/DC)"
       uses: mikepenz/xray-action@v1.1.0
