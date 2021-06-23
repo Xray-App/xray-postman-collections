@@ -4,7 +4,7 @@
   "description": "Xray Postman Collections",
   "main": "",
   "scripts": {
-    "test": "npx run newman run Xray_REST_API_v2.0.postman_collection.json -r cli,json,junit,junitxray --reporter-json-export newman.json --reporter-junit-export junit.xml --reporter-junitxray-export junit2.xml -e xrayserver.postman_environment.json"
+    "test": "node_modules/newman/bin/newman.js run Xray_REST_API_v2.0.postman_collection.json -r cli,json,junit,junitxray --reporter-json-export newman.json --reporter-junit-export junit.xml --reporter-junitxray-export junit2.xml -e xrayserver.postman_environment.json"
   },
   "repository": {
     "type": "git",
