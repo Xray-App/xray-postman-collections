@@ -979,7 +979,7 @@
 											}
 										},
 										"url": {
-											"raw": "https://xray.cloud.xpand-it.com/api/v1/backup/{{backup_jobId}}/status",
+											"raw": "https://xray.cloud.getxray.app/api/v1/backup/{{backup_jobId}}/status",
 											"protocol": "https",
 											"host": [
 												"xray",
@@ -1058,7 +1058,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": \"successful\",\n    \"fileUrl\": \"https://xray.cloud.xpand-it.com/api/v1/backup/file\"\n}"
+									"body": "{\n    \"status\": \"successful\",\n    \"fileUrl\": \"https://xray.cloud.getxray.app/api/v1/backup/file\"\n}"
 								},
 								{
 									"name": "get backup status - job not found",
@@ -1075,7 +1075,7 @@
 											}
 										},
 										"url": {
-											"raw": "https://xray.cloud.xpand-it.com/api/v1/backup/{{backup_jobId}}/status",
+											"raw": "https://xray.cloud.getxray.app/api/v1/backup/{{backup_jobId}}/status",
 											"protocol": "https",
 											"host": [
 												"xray",
@@ -8220,7 +8220,7 @@
 				"exec": [
 					"pm.sendRequest({",
 					"    //url: pm.environment.get(\"api-url\") + 'v1/authenticate',",
-					"    url:  'https://xray.cloud.xpand-it.com/api/v1/authenticate',",
+					"    url:  'https://xray.cloud.getxray.app/api/v1/authenticate',",
 					"    method: 'POST',",
 					"    header: {",
 					"        'content-type': 'application/json'",
@@ -8249,7 +8249,7 @@
 	"variable": [
 		{
 			"key": "XRAY_API_BASEURL",
-			"value": "https://xray.cloud.xpand-it.com/api/v1"
+			"value": "https://xray.cloud.getxray.app/api/v1"
 		},
 		{
 			"key": "PROJECT_KEY",

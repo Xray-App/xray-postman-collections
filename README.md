@@ -96,7 +96,7 @@ In [Jira Cloud](https://developer.atlassian.com/cloud/jira/platform/rest/) you n
 
 Xray REST APIs are used to manipulate data (e.g. importing results, obtain relations between entities); for historical reasons, Xray server/DC provides an extensive set of endpoints. The Xray REST API in Xray cloud is much more limited (GraphQL is preferred instead).
 As Xray server/DC provides the REST API on top of Jira's REST API, it reuses the same authentication mechanisms provided by Jira (e.g. basic auth, OAuth).
-In Xray cloud, a [specific authentication mechanism](https://confluence.xpand-it.com/display/XRAYCLOUD/Authentication+-+REST) is used instead.
+In Xray cloud, a [specific authentication mechanism](https://docs.getxray.app/display/XRAYCLOUD/Authentication+-+REST) is used instead.
 
 Xray GraphQL, as of July 2020, is only available in Xray on Jira cloud. It provides an extensive set of features, allowing you to query and update Xray related data. This is the preferred API for Xray cloud, even though some features (e.g. importing results) are only available in the Xray REST API.
 
@@ -104,7 +104,7 @@ Xray GraphQL, as of July 2020, is only available in Xray on Jira cloud. It provi
 
 #### REST API v1.0
 
-[Version 1.0](https://confluence.xpand-it.com/display/XRAY/v1.0) has been provided until Xray v3.6.x.
+[Version 1.0](https://docs.getxray.app/display/XRAY/v1.0) has been provided until Xray v3.6.x.
 It provides the ability to obtain and update Xray related entities and their relations. It also provides the necessary endpoints to import/export tests and test results.
 Unfortunately, not all endpoints are RESTful compliant due to some minor incompabilities.
 Xray REST API reuses the same authentication mechanism used by Jira's REST API.
@@ -113,17 +113,17 @@ Examples for this API are provided in [this collection](Xray%20REST%20API%20v1.0
 
 #### REST API v2.0
 
-[Version 2.0](https://confluence.xpand-it.com/display/XRAY/v2.0) is available since Xray v4.0. This is an evolution over the previous Xray REST v1.0 version, providing additional endpoints for dealing with test step and test run custom fields.
+[Version 2.0](https://docs.getxray.app/display/XRAY/v2.0) is available since Xray v4.0. This is an evolution over the previous Xray REST v1.0 version, providing additional endpoints for dealing with test step and test run custom fields.
 Xray REST API reuses the same authentication mechanism used by Jira's REST API.
 
 Examples for this API are provided in [this collection](Xray%20REST%20API%20v2.0.postman_collection.json).
 
 ### Xray Cloud (i.e. on Jira Cloud)
 
-Before performing any request on Xray related endpoints, you'll need to have a [Xray API key](https://confluence.xpand-it.com/display/XRAYCLOUD/Global+Settings%3A+API+Keys) (i.e. client_id + client_secret), so that you can authenticate against Xray (more info [here](https://confluence.xpand-it.com/display/XRAYCLOUD/Authentication+-+REST)).
+Before performing any request on Xray related endpoints, you'll need to have a [Xray API key](https://docs.getxray.app/display/XRAYCLOUD/Global+Settings%3A+API+Keys) (i.e. client_id + client_secret), so that you can authenticate against Xray (more info [here](https://docs.getxray.app/display/XRAYCLOUD/Authentication+-+REST)).
 This will create a token that you'll need to use in following requests.
 
-Note: Xray cloud APIs are rate/resource limited, so you should have that in mind. More info [here](https://confluence.xpand-it.com/display/XRAYCLOUD/GraphQL+API).
+Note: Xray cloud APIs are rate/resource limited, so you should have that in mind. More info [here](https://docs.getxray.app/display/XRAYCLOUD/GraphQL+API).
 
 Examples for the public APIs (REST and GraphQL based) are provided in the same [collection](Xray%20Cloud%20GraphQL%20API.postman_collection).
 
@@ -131,14 +131,14 @@ You need to define some variables (client_id, client_secret) in a Postman enviro
 
 #### REST API v1
 
-Xray cloud provides a [basic REST API](https://confluence.xpand-it.com/display/XRAYCLOUD/REST+API) that is mostly used to import test automation related results, similarly to the Xray server/DC REST APIs.
+Xray cloud provides a [basic REST API](https://docs.getxray.app/display/XRAYCLOUD/REST+API) that is mostly used to import test automation related results, similarly to the Xray server/DC REST APIs.
 There are some additional, unrelated calls though.
 Note that GraphQL is the preferred API for managing entities.
 Your requests need to be authenticated, using the token obtained in the respective REST API v1 call mentioned earlier.
 
 #### GraphQL
 
-Besides a basic REST API, Xray cloud also provides a [GraphQL API](https://confluence.xpand-it.com/display/XRAYCLOUD/GraphQL+API) which is quite extensive and allows to query and updte data easily.
+Besides a basic REST API, Xray cloud also provides a [GraphQL API](https://docs.getxray.app/display/XRAYCLOUD/GraphQL+API) which is quite extensive and allows to query and updte data easily.
 Querying with GraphQL is more flexible and efficient, as you can make one request to obtain entities, the fields you needs, relations, fields on the related entities, etc.
 Your requests need to be authenticated, using the token obtained in the respective REST API v1 call mentioned earlier.
 
