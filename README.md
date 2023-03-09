@@ -56,8 +56,8 @@ Part of them, if not all, can be defined as environment variables; in this case 
 
  Variable          | example                                           
 -------------------| --------------------------------------------------
- JIRA_BASEURL      | https://sandbox.xpand-it.com                      
- baseUrl           | https://sandbox.xpand-it.com/rest/raven/2.0/api   
+ JIRA_BASEURL      | https://sandbox.getxray.app                      
+ baseUrl           | https://sandbox.getxray.app/rest/raven/2.0/api   
  JIRA_USERNAME     | sergio                                            
  JIRA_PASSWORD     | xxxxxx                                            
 
