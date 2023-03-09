@@ -984,8 +984,8 @@
 											"host": [
 												"xray",
 												"cloud",
-												"xpand-it",
-												"com"
+												"getxray",
+												"app"
 											],
 											"path": [
 												"api",
@@ -1080,8 +1080,8 @@
 											"host": [
 												"xray",
 												"cloud",
-												"xpand-it",
-												"com"
+												"getxray",
+												"app"
 											],
 											"path": [
 												"api",
