@@ -109,14 +109,14 @@ It provides the ability to obtain and update Xray related entities and their rel
 Unfortunately, not all endpoints are RESTful compliant due to some minor incompabilities.
 Xray REST API reuses the same authentication mechanism used by Jira's REST API.
 
-Examples for this API are provided in [this collection](Xray%20REST%20API%20v1.0.postman_collection.json).
+Examples for this API are provided in [this collection](Xray_REST_API_v1.0.postman_collection.json).
 
 #### REST API v2.0
 
 [Version 2.0](https://docs.getxray.app/display/XRAY/v2.0) is available since Xray v4.0. This is an evolution over the previous Xray REST v1.0 version, providing additional endpoints for dealing with test step and test run custom fields.
 Xray REST API reuses the same authentication mechanism used by Jira's REST API.
 
-Examples for this API are provided in [this collection](Xray%20REST%20API%20v2.0.postman_collection.json).
+Examples for this API are provided in [this collection](Xray_REST_API_v2.0.postman_collection.json).
 
 ### Xray Cloud (i.e. on Jira Cloud)
 
