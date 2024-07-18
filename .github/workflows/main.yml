@@ -21,9 +21,9 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
     - name: generate auxiliary file with env variables for newman
@@ -35,7 +35,7 @@ jobs:
       run: npm install && npm test
     - name: "Import results to Xray (server/DC)"
       if: always()
-      uses: mikepenz/xray-action@v1.1.0
+      uses: mikepenz/xray-action@v3
       with:
          username: ${{ secrets.JIRASERVER_USERNAME }}
          password: ${{ secrets.JIRASERVER_PASSWORD }}
