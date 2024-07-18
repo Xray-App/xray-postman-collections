@@ -23,6 +23,6 @@
     "test": "^0.6.0"
   },
   "devDependencies": {
-    "newman": "^5.2.3"
+    "newman": "^5.3.2"
   }
 }

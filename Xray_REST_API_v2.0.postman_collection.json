@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "4f747217-0589-4fbf-940d-784f7179c314",
+		"_postman_id": "1ade7805-6a44-4a06-a86a-997d9ec6da11",
 		"name": "Xray_REST_API_v2.0",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1707738"
 	},
 	"item": [
 		{
@@ -940,7 +941,6 @@
 										{
 											"key": "testKey",
 											"value": "{{T1_KEY}}",
-											"type": "string",
 											"description": "(Required) The key of the test issue, e.g., CALC-562"
 										}
 									]
@@ -997,13 +997,11 @@
 										{
 											"key": "testKey",
 											"value": "{{T1_KEY}}",
-											"type": "string",
 											"description": "(Required) The key of the test issue, e.g., CALC-562"
 										},
 										{
 											"key": "stepId",
 											"value": "{{T1_STEP1_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the test step"
 										}
 									]
@@ -1066,7 +1064,6 @@
 										{
 											"key": "testKey",
 											"value": "{{T1_KEY}}",
-											"type": "string",
 											"description": "(Required) The key of the test issue, e.g., CALC-562"
 										}
 									]
@@ -1128,13 +1125,11 @@
 										{
 											"key": "testKey",
 											"value": "{{T1_KEY}}",
-											"type": "string",
 											"description": "(Required) Test Key"
 										},
 										{
 											"key": "stepId",
 											"value": "{{T1_NEWSTEP_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the test step"
 										}
 									]
@@ -1192,13 +1187,11 @@
 										{
 											"key": "testKey",
 											"value": "{{T1_KEY}}",
-											"type": "string",
 											"description": "(Required) Test with key CALC-123 does not exist or is not a manual test."
 										},
 										{
 											"key": "stepId",
 											"value": "{{T1_NEWSTEP_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the test step"
 										}
 									]
@@ -1246,19 +1239,16 @@
 										{
 											"key": "testKey",
 											"value": "{{T1_KEY}}",
-											"type": "string",
 											"description": "(Required) Test with key CALC-123 does not exist or is not a manual test."
 										},
 										{
 											"key": "stepId",
 											"value": "{{T1_NEWSTEP_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the test step"
 										},
 										{
 											"key": "attachmentId",
 											"value": "{{T1_NEWSTEP_ATTACH1_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the attachment"
 										}
 									]
@@ -1304,13 +1294,11 @@
 										{
 											"key": "testKey",
 											"value": "{{T1_KEY}}",
-											"type": "string",
 											"description": "(Required) The key of the test issue, e.g., CALC-562"
 										},
 										{
 											"key": "stepId",
 											"value": "{{T1_NEWSTEP_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the test step"
 										}
 									]
@@ -1498,8 +1486,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -1572,8 +1560,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -1651,8 +1639,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -1726,8 +1714,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -1799,8 +1787,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -1874,8 +1862,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -1954,8 +1942,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -2019,8 +2007,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -2090,8 +2078,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -2241,8 +2229,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -2315,8 +2303,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -2491,8 +2479,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -2565,8 +2553,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -2774,8 +2762,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -3061,7 +3049,6 @@
 										{
 											"key": "id",
 											"value": "{{TR3_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the Test Run"
 										}
 									]
@@ -3129,7 +3116,6 @@
 										{
 											"key": "id",
 											"value": "{{TR3_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the Test Run"
 										}
 									]
@@ -3184,8 +3170,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -3242,8 +3228,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -3311,8 +3297,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -3382,8 +3368,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -3444,8 +3430,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -3512,8 +3498,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -3584,8 +3570,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -3646,8 +3632,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -3709,8 +3695,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -3803,8 +3789,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -3867,8 +3853,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -3946,8 +3932,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -4022,8 +4008,8 @@
 										"header": [
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -4105,8 +4091,8 @@
 										"header": [
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -4172,8 +4158,8 @@
 										"header": [
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -4253,8 +4239,8 @@
 										"header": [
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -4313,8 +4299,8 @@
 										"header": [
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -4386,8 +4372,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -4460,8 +4446,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -4524,8 +4510,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -4589,8 +4575,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -4688,8 +4674,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -4755,8 +4741,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -4814,13 +4800,11 @@
 										{
 											"key": "id",
 											"value": "{{TR3_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the Test Run"
 										},
 										{
 											"key": "customFieldId",
 											"value": "<string>",
-											"type": "string",
 											"description": "(Required) The id of the Test Run Custom Field"
 										}
 									]
@@ -4862,13 +4846,11 @@
 										{
 											"key": "id",
 											"value": "{{TR3_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the Test Run"
 										},
 										{
 											"key": "customFieldId",
 											"value": "<string>",
-											"type": "string",
 											"description": "(Required) The id of the Test Run Custom Field"
 										}
 									]
@@ -5014,8 +4996,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -5088,8 +5070,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -5234,8 +5216,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -5308,8 +5290,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -5572,8 +5554,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"url": {
@@ -5804,7 +5786,7 @@
 							"name": "Cucumber",
 							"item": [
 								{
-									"name": "standard",
+									"name": "standard Cucumber endpoint",
 									"event": [
 										{
 											"listen": "test",
@@ -5879,7 +5861,7 @@
 							"name": "Behave",
 							"item": [
 								{
-									"name": "standard",
+									"name": "standard Behave endpoint",
 									"event": [
 										{
 											"listen": "test",
@@ -5954,7 +5936,7 @@
 							"name": "JUnit",
 							"item": [
 								{
-									"name": "standard",
+									"name": "standard JUnit endpoint",
 									"event": [
 										{
 											"listen": "test",
@@ -6030,7 +6012,7 @@
 							"name": "TestNG",
 							"item": [
 								{
-									"name": "standard",
+									"name": "standard TestNG endpoint",
 									"event": [
 										{
 											"listen": "test",
@@ -6106,7 +6088,7 @@
 							"name": "NUnit",
 							"item": [
 								{
-									"name": "standard",
+									"name": "standard Nunit endpoint",
 									"event": [
 										{
 											"listen": "test",
@@ -6182,7 +6164,7 @@
 							"name": "Robot Framework",
 							"item": [
 								{
-									"name": "standard",
+									"name": "standard Robot Framework endpoint",
 									"event": [
 										{
 											"listen": "test",
@@ -6395,12 +6377,7 @@
 											"type": "file",
 											"src": "sum.feature"
 										}
-									],
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									]
 								},
 								"url": {
 									"raw": "{{JIRA_BASEURL}}/rest/raven/2.0/import/feature?projectKey={{PROJECT_KEY}}",
@@ -6481,7 +6458,6 @@
 										{
 											"key": "id",
 											"value": "{{PROJECT_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the Test Run"
 										}
 									]
@@ -6529,7 +6505,6 @@
 										{
 											"key": "id",
 											"value": "{{PROJECT_ID}}",
-											"type": "string",
 											"description": "(Required) The id of the Project"
 										}
 									]
@@ -6605,27 +6580,27 @@
 		},
 		{
 			"key": "CF_Test_Type",
-			"value": "customfield_10000"
+			"value": "customfield_10200"
 		},
 		{
 			"key": "CF_Precondition_Type",
-			"value": "customfield_10008"
+			"value": "customfield_10220"
 		},
 		{
 			"key": "CF_Cucumber_Scenario",
-			"value": "customfield_10002"
+			"value": "customfield_10202"
 		},
 		{
 			"key": "CF_Cucumber_Test_Type",
-			"value": "customfield_10001"
+			"value": "customfield_10201"
 		},
 		{
 			"key": "CF_Manual_Test_Steps",
-			"value": "customfield_10004"
+			"value": "customfield_10204"
 		},
 		{
 			"key": "CF_Generic_Definition",
-			"value": "customfield_10003"
+			"value": "customfield_10203"
 		},
 		{
 			"key": "PROJECT_KEY",
@@ -6633,7 +6608,7 @@
 		},
 		{
 			"key": "CF_Test_Environments",
-			"value": "customfield_11805"
+			"value": "customfield_10224"
 		},
 		{
 			"key": "BUG_ISSUETYPE_NAME",
@@ -6645,7 +6620,7 @@
 		},
 		{
 			"key": "CF_Test_Repository_Path",
-			"value": "customfield_12100"
+			"value": "customfield_10210"
 		},
 		{
 			"key": "XRAY_VERSION_MAJOR",
