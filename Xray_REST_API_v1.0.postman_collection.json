@@ -5632,7 +5632,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "/Users/sergio/exps/xray-postman-collections/junit_sample.xml"
+													"src": "junit_sample.xml"
 												}
 											]
 										},
@@ -5709,7 +5709,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "/Users/sergio/exps/xray-postman-collections/testng_sample.xml"
+													"src": "testng_sample.xml"
 												}
 											]
 										},
@@ -5786,7 +5786,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "/Users/sergio/exps/xray-postman-collections/nunit_sample.xml"
+													"src": "nunit_sample.xml"
 												}
 											]
 										},
@@ -5863,7 +5863,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "/Users/sergio/exps/xray-postman-collections/robot_sample.xml"
+													"src": "robot_sample.xml"
 												}
 											]
 										},
@@ -6031,7 +6031,7 @@
 										{
 											"key": "file",
 											"type": "file",
-											"src": "/Users/sergio/exps/xray-postman-collections/sum.feature"
+											"src": "sum.feature"
 										}
 									]
 								},
