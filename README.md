@@ -43,30 +43,41 @@ The actual requests are organized in multiple folders and subfolders, by the sem
 ## How to use the collections
 
 First of all, you'll need [Postman](https://www.postman.com/) :-)
-In Postman **you need to configure variables on the collection** adjusting them to the specifics of your environment.
+In Postman **you need to configure variables related to your Xray/Jira instance**.
+You can adjust them at collection level, or even better, at environment level in Postman.
 
-**Examples**
-![collection variables for Xray REST v1](server_rest_v1_collection_variables.png)
-
-![collection variables for Xray REST v2](server_rest_v2_collection_variables.png)
-
-Part of them, if not all, can be defined as environment variables; in this case you need to create an environment in Postman and define the variables there.
-
-**Server specific variables, normally defined within a Postman environment**
+**Server specific variables, usually defined within a Postman environment**
 
  Variable          | example                                           
 -------------------| --------------------------------------------------
  JIRA_BASEURL      | https://sandbox.getxray.app                      
- baseUrl           | https://sandbox.getxray.app/rest/raven/2.0/api   
  JIRA_USERNAME     | sergio                                            
- JIRA_PASSWORD     | xxxxxx                                            
+ JIRA_PASSWORD     | xxxxxx    
+ CF_Test_Type      | customfield_10200
+ CF_Precondition_Type   | customfield_10220
+ CF_Cucumber_Scenario   | customfield_10202
+ CF_Cucumber_Test_Type  | customfield_10201
+ CF_Manual_Test_Steps   | customfield_10204
+ CF_Generic_Definition  | customfield_10203
+ CF_Test_Environments   | customfield_10224
+ CF_Test_Repository_Path| customfield_10210
+ TEST_ISSUETYPE_NAME    | Test
+ PRECONDITION_ISSUETYPE_NAME  | Pre-Condition
+ TESTSET_ISSUETYPE_NAME       | Test Set
+ TESTEXECUTION_ISSUETYPE_NAME | Test Execution
+ TESTPLAN_ISSUETYPE_NAME  | Test Plan
+ PROJECT_KEY          | CALC
+ BUG_ISSUETYPE_NAME   | Bug
+ STORY_ISSUETYPE_NAME | Story
+ XRAY_VERSION_MAJOR   | 4 (always use this value)
+
 
 **Example of environment configuration**
-![environment variables](server_variables.png)
+
+![Xray server/DC variables defined at environment level](server_variables.png)
 
 
-
-**Cloud specific variables, normally defined within a Postman environment**
+**Cloud specific variables, usually defined within a Postman environment**
 
  Variable          | example                                           
 -------------------| --------------------------------------------------
@@ -74,10 +85,13 @@ Part of them, if not all, can be defined as environment variables; in this case 
  client_secret      | 0011233... (obtained from a Xray API "key")       
  JIRA_BASEURL      | https://sergiofreire.atlassian.net                
  JIRA_USERNAME     | sergio.freire@example.com                         
- JIRA_PASSWORD     | xxxxxx   (JIRA Api token)                         
+ JIRA_PASSWORD     | xxxxxx   (JIRA Api token)
 
 **Example of environment configuration**
+
 ![environment variables](cloud_collection_variables.png)
+
+![Xray cloud variables defined at environment level](image.png)
 
 After adjusting the variables, it is recommended to run the requests in bulk using the collection runner in order to populate the variables (you could also run just the "setup" related requests).
 Afterwards, you can send requests individually right from Postman's main screen (i.e. the editor).
