@@ -5951,7 +5951,8 @@
 													"    pm.expect(jsonData.testExecIssue.key).to.not.be.empty;",
 													"});"
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -5979,7 +5980,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "junit_sample.xml"
+													"src": "/Users/sergio/exps/xray-postman-collections/junit_sample.xml"
 												}
 											]
 										},
@@ -6027,7 +6028,8 @@
 													"    pm.expect(jsonData.testExecIssue.key).to.not.be.empty;",
 													"});"
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -6055,7 +6057,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "testng_sample.xml"
+													"src": "/Users/sergio/exps/xray-postman-collections/testng_sample.xml"
 												}
 											]
 										},
@@ -6103,7 +6105,8 @@
 													"    pm.expect(jsonData.testExecIssue.key).to.not.be.empty;",
 													"});"
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -6131,7 +6134,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "nunit_sample.xml"
+													"src": "/Users/sergio/exps/xray-postman-collections/nunit_sample.xml"
 												}
 											]
 										},
@@ -6179,7 +6182,8 @@
 													"    pm.expect(jsonData.testExecIssue.key).to.not.be.empty;",
 													"});"
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -6207,7 +6211,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "robot_sample.xml"
+													"src": "/Users/sergio/exps/xray-postman-collections/robot_sample.xml"
 												}
 											]
 										},
@@ -6347,7 +6351,8 @@
 											"});",
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -6375,7 +6380,7 @@
 										{
 											"key": "file",
 											"type": "file",
-											"src": "sum.feature"
+											"src": "/Users/sergio/exps/xray-postman-collections/sum.feature"
 										}
 									]
 								},
@@ -6555,76 +6560,6 @@
 					""
 				]
 			}
-		}
-	],
-	"variable": [
-		{
-			"key": "TEST_ISSUETYPE_NAME",
-			"value": "Test"
-		},
-		{
-			"key": "PRECONDITION_ISSUETYPE_NAME",
-			"value": "Pre-Condition"
-		},
-		{
-			"key": "TESTSET_ISSUETYPE_NAME",
-			"value": "Test Set"
-		},
-		{
-			"key": "TESTEXECUTION_ISSUETYPE_NAME",
-			"value": "Test Execution"
-		},
-		{
-			"key": "TESTPLAN_ISSUETYPE_NAME",
-			"value": "Test Plan"
-		},
-		{
-			"key": "CF_Test_Type",
-			"value": "customfield_10200"
-		},
-		{
-			"key": "CF_Precondition_Type",
-			"value": "customfield_10220"
-		},
-		{
-			"key": "CF_Cucumber_Scenario",
-			"value": "customfield_10202"
-		},
-		{
-			"key": "CF_Cucumber_Test_Type",
-			"value": "customfield_10201"
-		},
-		{
-			"key": "CF_Manual_Test_Steps",
-			"value": "customfield_10204"
-		},
-		{
-			"key": "CF_Generic_Definition",
-			"value": "customfield_10203"
-		},
-		{
-			"key": "PROJECT_KEY",
-			"value": "CALC"
-		},
-		{
-			"key": "CF_Test_Environments",
-			"value": "customfield_10224"
-		},
-		{
-			"key": "BUG_ISSUETYPE_NAME",
-			"value": "Bug"
-		},
-		{
-			"key": "STORY_ISSUETYPE_NAME",
-			"value": "Story"
-		},
-		{
-			"key": "CF_Test_Repository_Path",
-			"value": "customfield_10210"
-		},
-		{
-			"key": "XRAY_VERSION_MAJOR",
-			"value": "4"
 		}
 	]
 }

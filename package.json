@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Xray-App/xray-postman-collections#readme",
   "dependencies": {
+    "newman-reporter-junitxray": "^1.0.3",
     "test": "^0.6.0"
   },
   "devDependencies": {
