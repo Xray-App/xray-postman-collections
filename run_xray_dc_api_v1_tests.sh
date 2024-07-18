@@ -1,0 +1,1 @@
+newman run Xray_REST_API_v1.0.postman_collection.json -r cli,json,junit,junitxray --reporter-json-export newman.json --reporter-junit-export junit.xml --reporter-junitxray-export junit2.xml -e Local\ VM.postman_environment.json
