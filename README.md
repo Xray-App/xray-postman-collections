@@ -139,7 +139,7 @@ This will create a token that you'll need to use in following requests.
 
 Note: Xray cloud APIs are rate/resource limited, so you should have that in mind. More info [here](https://docs.getxray.app/display/XRAYCLOUD/GraphQL+API).
 
-Examples for the public APIs (REST and GraphQL based) are provided in the same [collection](Xray%20Cloud%20GraphQL%20API.postman_collection).
+Examples for the public APIs (REST and GraphQL based) are provided in the same [collection](Xray_Cloud_GraphQL_API.postman_collection.json).
 
 You need to define some variables (client_id, client_secret) in a Postman environment used and assigned to run the collection.
 
